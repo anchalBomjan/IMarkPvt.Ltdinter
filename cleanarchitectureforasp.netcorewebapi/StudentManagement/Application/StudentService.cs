@@ -2,9 +2,14 @@
 
 namespace StudentManagement.Application
 {
+
+    //Application Layer -Service Class
+    // Represents the bussinsess use cases and orchestrates calls to the Domain Layer
     public class StudentService
     {
         private readonly IStudentRepository _studentRepository;
+
+        // Constructor Injection: Injejct the repository implementation from the infrastructure layer
         public StudentService(IStudentRepository studentRepository)
         {
             _studentRepository= studentRepository;
@@ -14,6 +19,8 @@ namespace StudentManagement.Application
         public async Task<IEnumerable<StudentDTO>> GetAllStudentsAsync()
         {
             var students=await _studentRepository.GetAllStudentsAsync();
+
+            //Convert Domain Model to DTOs (Application Layer)
             return students.Select(s => new StudentDTO 
             { 
              Id = s.Id,
@@ -50,6 +57,8 @@ namespace StudentManagement.Application
 
         public async Task AddStudentAsync(StudentDTO studentDto)
         {
+
+            //Convert DTOs to Domain Model(Application Layer)
             var student = new Student
             {
                 Name = studentDto.Name,
@@ -58,12 +67,14 @@ namespace StudentManagement.Application
 
             };
 
+
+            //Apply Bussiness rule (Domain Layer)
             student.ValidateAge();
             await _studentRepository.AddStudentAsync(student);
         }
 
 
-        public async Task UpdateStudentAsync(int id, StudentDTO studenmtDto)
+        public async Task UpdateStudentAsync(int id, StudentDTO studentDto)
         {
             var student = await _studentRepository.GetStudentByIdAsync(id);
             if(student == null)
@@ -72,10 +83,10 @@ namespace StudentManagement.Application
 
             
 
-
-            student.Name = studenmtDto.Name;
-            student.Email = studenmtDto.Email;
-            student.Age= studenmtDto.Age;
+           // student.Id= studentDto.Id;  part of key cannot be modify so they are set as identitiy(1,1)
+            student.Name = studentDto.Name;
+            student.Email = studentDto.Email;
+            student.Age= studentDto.Age;
             student.ValidateAge() ;
             await _studentRepository.UpdateStudentAsync(student);
 
