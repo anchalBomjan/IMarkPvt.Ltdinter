@@ -3,9 +3,10 @@ using StudentManagement.Application;
 using StudentManagement.Domain;
 using StudentManagement.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-
 namespace StudentManagement
 {
+
+
     public class Program
     {
         public static void Main(string[] args)

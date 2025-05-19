@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Application;
-using System.Runtime.CompilerServices;
-
-
 
 namespace StudentManagement.Controllers
 {
