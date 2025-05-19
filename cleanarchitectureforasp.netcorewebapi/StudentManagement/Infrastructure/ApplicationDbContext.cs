@@ -6,6 +6,8 @@ namespace StudentManagement.Infrastructure
     public class ApplicationDbContext:DbContext
     {
 
+        //ApplicationDbContext is responsible for Database interactions 
+        //Defined DbSet for entities and configures the relations
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -36,6 +38,7 @@ namespace StudentManagement.Infrastructure
                 );
         }
 
+        //DbSet<Student> represented  "Students"  table in the Database
         public DbSet<Student> Students { get; set; }
 
 
