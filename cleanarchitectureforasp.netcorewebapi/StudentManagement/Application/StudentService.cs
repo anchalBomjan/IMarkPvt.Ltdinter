@@ -29,6 +29,23 @@ namespace StudentManagement.Application
 
         }
 
+      
+        // Use Case: Fetch a single student by ID (Application Layer)
+        public async Task<StudentDTO?> GetStudentByIdAsync(int id)
+        {
+            // Domain Layer: Fetches data via repository (Infrastructure Layer)
+            var student = await _studentRepository.GetStudentByIdAsync(id);
+            if (student == null)
+                return null;
+            // Convert Domain Model to DTO (Application Layer)
+            return new StudentDTO
+            {
+                Id = student.Id,
+                Name = student.Name,
+                Email = student.Email,
+                Age = student.Age
+            };
+        }
 
 
         public async Task AddStudentAsync(StudentDTO studentDto)
