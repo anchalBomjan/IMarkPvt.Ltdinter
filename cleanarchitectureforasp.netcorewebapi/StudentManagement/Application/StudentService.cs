@@ -29,7 +29,7 @@ namespace StudentManagement.Application
              Age = s.Age,
             
             
-            
+          
             }).ToList();
 
           
@@ -97,6 +97,7 @@ namespace StudentManagement.Application
 
         public async Task DeleteStudentAsync(int id)
         {
+
             await _studentRepository.DeleteStudentAsync(id);
 
 

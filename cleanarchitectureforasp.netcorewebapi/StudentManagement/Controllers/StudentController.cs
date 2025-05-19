@@ -3,8 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Application;
 using System.Runtime.CompilerServices;
 
+
+
 namespace StudentManagement.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase

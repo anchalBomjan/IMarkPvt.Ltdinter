@@ -3,6 +3,7 @@ using StudentManagement.Domain;
 
 namespace StudentManagement.Infrastructure
 {
+
     public class StudentRepositoroy:IStudentRepository
     {
         private readonly ApplicationDbContext _context;
