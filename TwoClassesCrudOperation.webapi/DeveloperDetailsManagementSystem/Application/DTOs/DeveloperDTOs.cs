@@ -11,7 +11,7 @@ namespace DeveloperDetailsManagementSystem.Application.DTOs
         public decimal EstimateIncome { get; set; }
         // Foreign key of Address
 
-        public int AddressId { get; set; }
+       public int AddressId { get; set; }
 
         // navigate the property of Address
         public AddressDTOs Address { get; set; }

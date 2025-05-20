@@ -1,4 +1,6 @@
 
+using DeveloperDetailsManagementSystem.Application;
+using DeveloperDetailsManagementSystem.Domain;
 using DeveloperDetailsManagementSystem.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +21,8 @@ namespace DeveloperDetailsManagementSystem
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddScoped<IDeveloperRepository, DeveloperRepository>();    
+            builder.Services.AddScoped<DeveloperService>();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();

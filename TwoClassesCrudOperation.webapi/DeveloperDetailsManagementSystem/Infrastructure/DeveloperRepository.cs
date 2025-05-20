@@ -35,13 +35,18 @@ namespace DeveloperDetailsManagementSystem.Infrastructure
 
         public async  Task<IEnumerable<Developer>> GetAllDeveloperAsync()
         {
-            return await _context.Developers.ToListAsync();
+            return await _context.Developers
+                .Include(d=>d.Address)
+                .ToListAsync();
 
         }
 
         public  async Task<Developer?> GetDeveloperByIdAsync(int id)
         {
-             return  await _context.Developers.FindAsync(id);
+             return  await _context.Developers
+                .Include(d=>d.Address)
+                .FirstOrDefaultAsync(d=>d.Id == id);
+                
 
          
           
