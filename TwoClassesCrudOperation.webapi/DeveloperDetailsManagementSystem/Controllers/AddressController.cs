@@ -20,48 +20,103 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> GetAll()
+        //{
+        //    var adderess = await _addressService.GetAllAddressAsync();
+        //    return Ok(adderess);
+        //}
+
+
+        ////GET:api/Adderess/Id
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> GetById(int id)
+        //{
+        //    var adderess = await _addressService.GetAddressById(id);
+        //    if (adderess == null) { return NotFound(); }
+        //    return Ok(adderess);
+
+        //}
+
+        ////POST: api/Adderess
+
+        //[HttpPost]
+        //public async Task<IActionResult> Create([FromBody]  CreateAdderessDTOs dtos)
+        //{
+        //    await _addressService.AddAddressAsync(dtos);
+
+        //    return Ok( new {  Message ="New Adderess is created"});
+        //}
+        ////PUT: api/Adderess/{id}
+        //[HttpPut]
+        //public async Task<IActionResult>Put(int id, [FromBody] CreateAdderessDTOs dTOs)
+        //{
+        //    await _addressService.UpdateAddressAsync(id,dTOs);
+        //    return Ok(new { message = "Successfully you have edited  address" });
+
+        //}
+
+        ////DELETE:api/Adderess/{id}
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    await _addressService.DeleteAddressAsync(id);
+        //    return Ok(new { message = "Successfully you have deleted" });
+        //}
+
+
+
         //GET:api/Adderess
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<ActionResult<AddressDTOs>> GetAll()
         {
-            var adderess = await _addressService.GetAllAddressAsync();
-            return Ok(adderess);
-        }
 
-        //GET:api/Adderess/Id
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+            var adderesses = await _addressService.GetAllAddressAsync();
+            return Ok(adderesses);
+        }
+        //GET:api/Adderess
+
+
+
+
+
+
+
+        //GET:api/Adderess/{id}
+        [HttpPost("{id}")]
+        public async Task <ActionResult<CreateAdderessDTOs>>GetById(int id)
         {
             var adderess = await _addressService.GetAddressById(id);
             if (adderess == null) { return NotFound(); }
             return Ok(adderess);
-
         }
+        //Post:api/Adderess
 
-        //POST: api/Adderess
-
+        
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody]  CreateAdderessDTOs dtos)
+        public async Task <ActionResult> Create(CreateAdderessDTOs createAdderessDTOs)
         {
-            await _addressService.AddAddressAsync(dtos);
+            await _addressService.AddAddressAsync(createAdderessDTOs);
+            return Ok(createAdderessDTOs);
+        
 
-            return Ok( new {  Message ="New Adderess is created"});
         }
         //PUT: api/Adderess/{id}
-        [HttpPut]
-        public async Task<IActionResult>Put(int id, [FromBody] CreateAdderessDTOs dTOs)
+        [HttpPut("{id}")]
+        public async Task<ActionResult>Put(int id, [FromBody] CreateAdderessDTOs addressDTOs)
         {
-            await _addressService.UpdateAddressAsync(id,dTOs);
-            return Ok(new { message = "Successfully you have edited  address" });
-
+            await _addressService.UpdateAddressAsync(id, addressDTOs);
+            return Ok(addressDTOs);
         }
-
         //DELETE:api/Adderess/{id}
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
             await _addressService.DeleteAddressAsync(id);
-            return Ok(new { message = "Successfully you have deleted" });
+            return Ok();
         }
+
+
+
     }
 }
