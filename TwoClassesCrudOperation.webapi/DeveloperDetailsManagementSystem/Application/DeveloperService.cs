@@ -12,12 +12,12 @@ namespace DeveloperDetailsManagementSystem.Application
             _developerrepository = repository;
         }
 
-        public async Task<IEnumerable<DeveloperDTOs>> GetAllDeveloperAsync()
+        public async Task<IEnumerable<DeveloperDTO>> GetAllDeveloperAsync()
         {
 
             var developers=await _developerrepository.GetAllDeveloperAsync();
 
-            return developers.Select(d => new DeveloperDTOs
+            return developers.Select(d => new DeveloperDTO
             {
                 Id = d.Id,
                 Name = d.Name,
@@ -25,15 +25,23 @@ namespace DeveloperDetailsManagementSystem.Application
                 YearsOfExperience = d.YearsOfExperience,
                 EstimateIncome = d.EstimateIncome,
                 //AddressId = d.AddressId,
-                Address = new AddressDTOs
+                //Address = new AddressDTO
+                //{
+                //    Id = d.Address.Id,
+                //    Country = d.Address.Country
+                //}
+                AddressId = d.AddressId, // Include AddressId for completeness
+                Address = d.Address != null ? new AddressDTO
                 {
                     Id = d.Address.Id,
                     Country = d.Address.Country
-                }
+                } : null
+
+
             }).ToList();
 
         }
-        public async Task<DeveloperDTOs?> GetDeveloperById(int id)
+        public async Task<DeveloperDTO?> GetDeveloperById(int id)
         {
  
 
@@ -42,7 +50,7 @@ namespace DeveloperDetailsManagementSystem.Application
             if (developer == null)
                 return null;
 
-            return new DeveloperDTOs
+            return new DeveloperDTO
             {
                 Id = developer.Id,
                 Name = developer.Name,
@@ -50,15 +58,21 @@ namespace DeveloperDetailsManagementSystem.Application
                 YearsOfExperience = developer.YearsOfExperience,
                 EstimateIncome = developer.EstimateIncome,
                 AddressId = developer.AddressId,
-                Address = new AddressDTOs
+                //Address = new AddressDTO
+                //{
+                //    Id = developer.Address.Id,
+                //    Country = developer.Address.Country
+                //}
+                Address = developer.Address != null ? new AddressDTO
                 {
                     Id = developer.Address.Id,
                     Country = developer.Address.Country
-                }
+                } : null
+
             };
         }
 
-        public async Task AddDeveloperAsync(DeveloperCreateDTOs developerDTOs)
+        public async Task AddDeveloperAsync(DeveloperCreateDTO developerDTOs)
         {
             //convert DTOs to Domain Model
             var developer = new Developer
@@ -77,7 +91,7 @@ namespace DeveloperDetailsManagementSystem.Application
            
         }
 
-        public async Task UpdateDeveloperAsync(int id, DeveloperCreateDTOs developerDTOs)
+        public async Task UpdateDeveloperAsync(int id, DeveloperCreateDTO developerDTOs)
         {
             var student= await _developerrepository.GetDeveloperByIdAsync(id);
             if (student == null)

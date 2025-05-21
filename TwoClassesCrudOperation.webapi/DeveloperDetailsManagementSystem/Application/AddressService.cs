@@ -12,10 +12,10 @@ namespace DeveloperDetailsManagementSystem.Application
 
         }
 
-        public async Task <IEnumerable<AddressDTOs>> GetAllAddressAsync()
+        public async Task <IEnumerable<AddressDTO>> GetAllAddressAsync()
         {
             var addresses = await _addressRepository.GetAllAddressAsync();
-            return addresses.Select(a=> new AddressDTOs
+            return addresses.Select(a=> new AddressDTO
             {
                 Id = a.Id,
                 Country = a.Country,
@@ -23,11 +23,11 @@ namespace DeveloperDetailsManagementSystem.Application
            
 
         }
-        public async Task<AddressDTOs?> GetAddressById(int id)
+        public async Task<AddressDTO?> GetAddressById(int id)
         {
             var address= await _addressRepository.GetAddressByIdAsync(id);
             if (address == null) { return null; }
-            return   new AddressDTOs
+            return   new AddressDTO
             {
                 Id = address.Id,
                 Country = address.Country,
@@ -36,7 +36,7 @@ namespace DeveloperDetailsManagementSystem.Application
           
         }
 
-        public async Task AddAddressAsync(CreateAdderessDTOs addressdto)
+        public async Task AddAddressAsync(CreateAdderessDTO addressdto)
         {
             var address = new Address
             {
@@ -52,7 +52,7 @@ namespace DeveloperDetailsManagementSystem.Application
           await _addressRepository.DeleteAddressAsync(id);
         }
 
-        public async Task UpdateAddressAsync( int id,CreateAdderessDTOs addressdto)
+        public async Task UpdateAddressAsync( int id,CreateAdderessDTO addressdto)
         {
             var address = await _addressRepository.GetAddressByIdAsync( id);
             if (address == null) { throw new Exception("Not found"); }

@@ -39,13 +39,12 @@ namespace DeveloperDetailsManagementSystem.Infrastructure
                .HasOne(d => d.Address)
                .WithMany(a => a.Developers)
                .HasForeignKey(d => d.AddressId)
-               .OnDelete(DeleteBehavior.ClientCascade);
+               .OnDelete(DeleteBehavior.SetNull);
          base.OnModelCreating(modelBuilder);
 
         }
 
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Developer> Developers { get; set; }
-
     }
 }

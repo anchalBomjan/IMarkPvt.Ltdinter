@@ -75,7 +75,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         //GET:api/Adderess
         [HttpGet]
-        public async Task<ActionResult<AddressDTOs>> GetAll()
+        public async Task<ActionResult<AddressDTO>> GetAll()
         {
 
             var adderesses = await _addressService.GetAllAddressAsync();
@@ -91,7 +91,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         //GET:api/Adderess/{id}
         [HttpPost("{id}")]
-        public async Task <ActionResult<CreateAdderessDTOs>>GetById(int id)
+        public async Task <ActionResult<CreateAdderessDTO>>GetById(int id)
         {
             var adderess = await _addressService.GetAddressById(id);
             if (adderess == null) { return NotFound(); }
@@ -101,19 +101,19 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         
         [HttpPost]
-        public async Task <ActionResult> Create(CreateAdderessDTOs createAdderessDTOs)
+        public async Task <ActionResult> Create(CreateAdderessDTO createAdderessDTO)
         {
-            await _addressService.AddAddressAsync(createAdderessDTOs);
-            return Ok(createAdderessDTOs);
+            await _addressService.AddAddressAsync(createAdderessDTO);
+            return Ok(createAdderessDTO);
         
 
         }
         //PUT: api/Adderess/{id}
         [HttpPut("{id}")]
-        public async Task<ActionResult>Put(int id, [FromBody] CreateAdderessDTOs addressDTOs)
+        public async Task<ActionResult>Put(int id, [FromBody] CreateAdderessDTO addressDTO)
         {
-            await _addressService.UpdateAddressAsync(id, addressDTOs);
-            return Ok(addressDTOs);
+            await _addressService.UpdateAddressAsync(id, addressDTO);
+            return Ok(addressDTO);
         }
         //DELETE:api/Adderess/{id}
         [HttpDelete("{id}")]

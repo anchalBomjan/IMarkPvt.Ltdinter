@@ -36,7 +36,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         //POST: api/Developer
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] DeveloperCreateDTOs dto)
+        public async Task<IActionResult> Create([FromBody] DeveloperCreateDTO dto)
         {
             await _developerService.AddDeveloperAsync(dto);
             return Ok(new { message = "Developer created successfully" });
@@ -45,7 +45,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         //PUT: api/Developer/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] DeveloperCreateDTOs dto)
+        public async Task<IActionResult> Update(int id, [FromBody] DeveloperCreateDTO dto)
         {
             try
             {

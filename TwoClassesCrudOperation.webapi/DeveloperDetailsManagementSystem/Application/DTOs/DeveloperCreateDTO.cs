@@ -1,6 +1,6 @@
 ﻿namespace DeveloperDetailsManagementSystem.Application.DTOs
 {
-    public class DeveloperCreateDTOs
+    public class DeveloperCreateDTO
     {
 
         public string Name { get; set; }
@@ -9,6 +9,6 @@
         public decimal EstimateIncome { get; set; }
 
         // only accept addressId
-        public int AddressId { get; set; }
+        public int? AddressId { get; set; }
     }
 }

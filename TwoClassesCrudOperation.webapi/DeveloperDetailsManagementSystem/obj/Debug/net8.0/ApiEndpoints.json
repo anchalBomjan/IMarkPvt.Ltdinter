@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.AddressDTOs",
+        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.AddressDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "createAdderessDTOs",
-        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.CreateAdderessDTOs",
+        "Name": "createAdderessDTO",
+        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.CreateAdderessDTO",
         "IsRequired": true
       }
     ],
@@ -51,7 +51,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.CreateAdderessDTOs",
+        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.CreateAdderessDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -75,8 +75,8 @@
         "IsRequired": true
       },
       {
-        "Name": "addressDTOs",
-        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.CreateAdderessDTOs",
+        "Name": "addressDTO",
+        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.CreateAdderessDTO",
         "IsRequired": true
       }
     ],
@@ -118,7 +118,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.DeveloperCreateDTOs",
+        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.DeveloperCreateDTO",
         "IsRequired": true
       }
     ],
@@ -155,7 +155,7 @@
       },
       {
         "Name": "dto",
-        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.DeveloperCreateDTOs",
+        "Type": "DeveloperDetailsManagementSystem.Application.DTOs.DeveloperCreateDTO",
         "IsRequired": true
       }
     ],

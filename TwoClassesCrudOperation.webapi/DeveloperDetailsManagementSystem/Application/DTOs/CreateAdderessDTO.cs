@@ -1,6 +1,6 @@
 ﻿namespace DeveloperDetailsManagementSystem.Application.DTOs
 {
-    public class CreateAdderessDTOs
+    public class CreateAdderessDTO
     {
         public string Country { get; set; }
 

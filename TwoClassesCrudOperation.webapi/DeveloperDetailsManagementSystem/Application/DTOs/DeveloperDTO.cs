@@ -2,7 +2,7 @@
 
 namespace DeveloperDetailsManagementSystem.Application.DTOs
 {
-    public class DeveloperDTOs
+    public class DeveloperDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -11,10 +11,10 @@ namespace DeveloperDetailsManagementSystem.Application.DTOs
         public decimal EstimateIncome { get; set; }
         // Foreign key of Address
 
-       public int AddressId { get; set; }
+       public int? AddressId { get; set; }
 
         // navigate the property of Address
-        public AddressDTOs Address { get; set; }
+        public AddressDTO Address { get; set; }
 
 
 
