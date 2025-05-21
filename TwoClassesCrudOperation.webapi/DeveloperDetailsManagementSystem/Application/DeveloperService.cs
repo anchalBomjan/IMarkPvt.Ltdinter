@@ -24,10 +24,10 @@ namespace DeveloperDetailsManagementSystem.Application
                 Email = d.Email,
                 YearsOfExperience = d.YearsOfExperience,
                 EstimateIncome = d.EstimateIncome,
-              //  AddressId = d.AddressId,
+                //AddressId = d.AddressId,
                 Address = new AddressDTOs
                 {
-                   Id = d.Address.Id,
+                    //Id = d.Address.Id,
                     Country = d.Address.Country
                 }
             }).ToList();
