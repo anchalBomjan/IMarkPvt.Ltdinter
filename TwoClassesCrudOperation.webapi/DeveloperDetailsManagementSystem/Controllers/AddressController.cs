@@ -20,6 +20,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         }
 
+        //GET:api/Adderess
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -27,7 +28,8 @@ namespace DeveloperDetailsManagementSystem.Controllers
             return Ok(adderess);
         }
 
-        [HttpGet]
+        //GET:api/Adderess/Id
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var adderess = await _addressService.GetAddressById(id);
@@ -36,6 +38,8 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         }
 
+        //POST: api/Adderess
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody]  CreateAdderessDTOs dtos)
         {
@@ -43,6 +47,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
             return Ok( new {  Message ="New Adderess is created"});
         }
+        //PUT: api/Adderess/{id}
         [HttpPut]
         public async Task<IActionResult>Put(int id, [FromBody] CreateAdderessDTOs dTOs)
         {
@@ -51,7 +56,8 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
         }
 
-        [HttpDelete]
+        //DELETE:api/Adderess/{id}
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             await _addressService.DeleteAddressAsync(id);

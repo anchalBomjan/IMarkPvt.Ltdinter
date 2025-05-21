@@ -14,12 +14,15 @@ namespace DeveloperDetailsManagementSystem.Controllers
         {
             _developerService = developerService;
         }
+        //GET:api/Developer
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var result = await _developerService.GetAllDeveloperAsync();
             return Ok(result);
         }
+
+        //GET:/api/Developer/{id}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
@@ -31,6 +34,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
             return Ok(developer);
         }
 
+        //POST: api/Developer
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] DeveloperCreateDTOs dto)
         {
@@ -38,6 +42,8 @@ namespace DeveloperDetailsManagementSystem.Controllers
             return Ok(new { message = "Developer created successfully" });
         }
 
+
+        //PUT: api/Developer/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] DeveloperCreateDTOs dto)
         {
@@ -51,7 +57,7 @@ namespace DeveloperDetailsManagementSystem.Controllers
                 return NotFound(new { message = ex.Message });
             }
         }
-
+        //DELETE: api/Developer/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
