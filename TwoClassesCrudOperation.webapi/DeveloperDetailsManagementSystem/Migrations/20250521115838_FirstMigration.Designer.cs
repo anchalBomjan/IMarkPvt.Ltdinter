@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DeveloperDetailsManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250520070136_FirstMigration")]
+    [Migration("20250521115838_FirstMigration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
@@ -131,7 +131,7 @@ namespace DeveloperDetailsManagementSystem.Migrations
                     b.HasOne("DeveloperDetailsManagementSystem.Domain.Address", "Address")
                         .WithMany("Developers")
                         .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
 
                     b.Navigation("Address");

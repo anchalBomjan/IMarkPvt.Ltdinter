@@ -44,8 +44,7 @@ namespace DeveloperDetailsManagementSystem.Migrations
                         name: "FK_Developers_Addresses_AddressId",
                         column: x => x.AddressId,
                         principalTable: "Addresses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.InsertData(

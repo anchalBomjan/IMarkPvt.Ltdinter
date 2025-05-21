@@ -128,7 +128,7 @@ namespace DeveloperDetailsManagementSystem.Migrations
                     b.HasOne("DeveloperDetailsManagementSystem.Domain.Address", "Address")
                         .WithMany("Developers")
                         .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
 
                     b.Navigation("Address");

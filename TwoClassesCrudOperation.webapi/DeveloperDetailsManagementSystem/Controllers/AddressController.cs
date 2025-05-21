@@ -1,8 +1,7 @@
 ﻿using DeveloperDetailsManagementSystem.Application;
 using DeveloperDetailsManagementSystem.Application.DTOs;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
+
 
 namespace DeveloperDetailsManagementSystem.Controllers
 {
@@ -19,7 +18,6 @@ namespace DeveloperDetailsManagementSystem.Controllers
 
 
         }
-
         //[HttpGet]
         //public async Task<IActionResult> GetAll()
         //{
@@ -65,6 +63,15 @@ namespace DeveloperDetailsManagementSystem.Controllers
         //}
 
 
+
+
+
+
+
+        /// <summary>
+        ///   for API Documentation Testing best use of ActionResult
+        /// </summary>
+        /// <returns></returns>
 
         //GET:api/Adderess
         [HttpGet]

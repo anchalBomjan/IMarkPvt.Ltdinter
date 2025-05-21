@@ -39,7 +39,7 @@ namespace DeveloperDetailsManagementSystem.Infrastructure
                .HasOne(d => d.Address)
                .WithMany(a => a.Developers)
                .HasForeignKey(d => d.AddressId)
-               .OnDelete(DeleteBehavior.Restrict);
+               .OnDelete(DeleteBehavior.ClientCascade);
          base.OnModelCreating(modelBuilder);
 
         }
