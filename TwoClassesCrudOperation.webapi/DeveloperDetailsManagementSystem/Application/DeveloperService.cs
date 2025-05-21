@@ -27,7 +27,7 @@ namespace DeveloperDetailsManagementSystem.Application
                 //AddressId = d.AddressId,
                 Address = new AddressDTOs
                 {
-                    //Id = d.Address.Id,
+                    Id = d.Address.Id,
                     Country = d.Address.Country
                 }
             }).ToList();

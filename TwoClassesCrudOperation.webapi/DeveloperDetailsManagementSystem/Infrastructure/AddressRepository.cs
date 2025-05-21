@@ -36,7 +36,7 @@ namespace DeveloperDetailsManagementSystem.Infrastructure
              return  await _context.Addresses.FindAsync(id);
         }
 
-        public  async Task<IEnumerable<Address>> GetAllAddressAsync(Address address)
+        public  async Task<IEnumerable<Address>> GetAllAddressAsync()
         {
             return await _context.Addresses.ToListAsync();
         }
