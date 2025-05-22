@@ -40,6 +40,7 @@ namespace DeveloperDetailsManagementSystem.Infrastructure
                .WithMany(a => a.Developers)
                .HasForeignKey(d => d.AddressId)
                .OnDelete(DeleteBehavior.SetNull);
+            //  Above  line of code helps to set null for adderessId in developer tbl which is  primarykey of address Tbl 
          base.OnModelCreating(modelBuilder);
 
         }
