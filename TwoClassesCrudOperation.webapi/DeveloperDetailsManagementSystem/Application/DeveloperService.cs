@@ -50,6 +50,7 @@ namespace DeveloperDetailsManagementSystem.Application
             if (developer == null)
                 return null;
 
+            //convert domain to Dto
             return new DeveloperDTO
             {
                 Id = developer.Id,

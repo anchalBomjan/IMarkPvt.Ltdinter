@@ -9,5 +9,10 @@
         Task AddDeveloperAsync(Developer developer);
         Task UpdateDeveloperAsync(Developer developer);
         Task DeleteDeveloperAsync(int id);
+
+
+
     }
+
+
 }
