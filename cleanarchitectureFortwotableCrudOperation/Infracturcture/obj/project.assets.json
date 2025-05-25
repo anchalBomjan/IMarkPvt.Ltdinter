@@ -199,6 +199,19 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -561,6 +574,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -569,6 +587,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Application >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0"
     ]
@@ -600,6 +619,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Application\\Application.csproj": {
+              "projectPath": "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Application\\Application.csproj"
+            },
             "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Domain\\Domain.csproj": {
               "projectPath": "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Domain\\Domain.csproj"
             }
