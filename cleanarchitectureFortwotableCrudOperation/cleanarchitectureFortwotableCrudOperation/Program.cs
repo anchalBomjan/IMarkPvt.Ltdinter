@@ -1,5 +1,7 @@
 
 using Infracturcture.Presistance;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace cleanarchitectureFortwotableCrudOperation
 {
