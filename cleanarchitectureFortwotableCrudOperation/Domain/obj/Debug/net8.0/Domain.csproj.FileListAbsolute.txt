@@ -1,0 +1,12 @@
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\bin\Debug\net8.0\Domain.dll
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\bin\Debug\net8.0\Domain.pdb
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.dll
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\Domain.pdb
+D:\IMarkPvt.Ltdinter\cleanarchitectureFortwotableCrudOperation\Domain\obj\Debug\net8.0\ref\Domain.dll

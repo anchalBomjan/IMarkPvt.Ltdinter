@@ -113,7 +113,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Tools": {
+            "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
@@ -233,9 +233,6 @@
             "projectReferences": {
               "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Application\\Application.csproj": {
                 "projectPath": "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Application\\Application.csproj"
-              },
-              "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\IMarkPvt.Ltdinter\\cleanarchitectureFortwotableCrudOperation\\Domain\\Domain.csproj"
               }
             }
           }
@@ -260,6 +257,12 @@
               "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0, )"
             }

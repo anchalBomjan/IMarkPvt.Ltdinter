@@ -1,5 +1,8 @@
 
+using Application.Interface;
+using Application.Services;
 using Infracturcture.Presistance;
+using Infrasturcture.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -19,6 +22,10 @@ namespace cleanarchitectureFortwotableCrudOperation
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddScoped<IDeveloperRepository, DeveloperRepository>();
+            builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+            builder.Services.AddScoped<AddressService>();
+            builder.Services.AddScoped<DeveloperService>();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
