@@ -13,7 +13,9 @@ namespace cqrsMediator.Application.Common.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<Developer, DeveloperDTO>();
+            CreateMap<Developer, DeveloperDTO>()
+            .ForMember(dest => dest.Address,
+                      opt => opt.MapFrom(src => src.Address));
             CreateMap<Address, AddressDTO>();
 
         }

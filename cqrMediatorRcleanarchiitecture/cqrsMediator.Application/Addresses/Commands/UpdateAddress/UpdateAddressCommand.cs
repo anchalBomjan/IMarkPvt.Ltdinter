@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Addresses.Commands.UpdateAddress
 {
-    public record UpdateAdressCommand(
+    public record UpdateAddressCommand(
+        int Id,
 
         string Country
         

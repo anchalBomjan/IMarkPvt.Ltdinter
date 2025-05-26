@@ -32,6 +32,8 @@ namespace cqrsMediator.Application.Developers.Commands.UpdateDeveloper
             //    var addressExists = await context.Addresses
             //        .AnyAsync(a => a.Id == request.AddressId.Value, ct);
 
+
+            // checks for valid AddressId provided
             //    if (!addressExists)
             //    {
             //        throw new NotFoundException(nameof(Address), request.AddressId.Value);
