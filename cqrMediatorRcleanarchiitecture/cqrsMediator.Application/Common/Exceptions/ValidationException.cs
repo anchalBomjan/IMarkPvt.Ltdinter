@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Common.Exceptions
 {// Application/Common/Exceptions/ValidationException.cs
-   
+
 
     //public class ValidationException : Exception
     //{
@@ -27,6 +27,9 @@ namespace cqrsMediator.Application.Common.Exceptions
     //            .ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());
     //    }
     //}
+
+    /// you have to install FluentValidation packages
+    
 
 
 }
