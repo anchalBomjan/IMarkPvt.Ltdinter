@@ -11,6 +11,9 @@ namespace Application.Services
 {
     public class DeveloperService
     {
+        /// <summary>
+        /// /No need to do manual mapping  for  Project  this  code demonstration  how can we implement code in service
+        /// </summary>
 
         private readonly IDeveloperRepository _developerrepository;
         public DeveloperService(IDeveloperRepository repository)
