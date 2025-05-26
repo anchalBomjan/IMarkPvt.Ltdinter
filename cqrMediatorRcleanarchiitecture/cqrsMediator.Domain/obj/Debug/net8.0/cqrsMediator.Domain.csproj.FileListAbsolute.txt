@@ -1,0 +1,12 @@
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\bin\Debug\net8.0\cqrsMediator.Domain.deps.json
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\bin\Debug\net8.0\cqrsMediator.Domain.dll
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\bin\Debug\net8.0\cqrsMediator.Domain.pdb
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.AssemblyInfoInputs.cache
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.AssemblyInfo.cs
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.csproj.CoreCompileInputs.cache
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.sourcelink.json
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.dll
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\refint\cqrsMediator.Domain.dll
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\cqrsMediator.Domain.pdb
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Domain\obj\Debug\net8.0\ref\cqrsMediator.Domain.dll

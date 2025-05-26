@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cqrsMediatorWeb.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9a32b440f406339b19482d2180a8f06f7c5d0ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+480da3de23fe907a45fc37e54ee542e96b027b8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("cqrsMediatorWeb.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cqrsMediatorWeb.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

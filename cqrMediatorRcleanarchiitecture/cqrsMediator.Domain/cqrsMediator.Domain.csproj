@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Entities\s3jyb010.hwp~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Mappings\" />
+  </ItemGroup>
+
 </Project>

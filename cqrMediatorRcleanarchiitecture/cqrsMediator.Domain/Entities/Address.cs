@@ -8,8 +8,8 @@ namespace cqrsMediator.Domain.Entities
 {
     public  class Address
     {
-        public int Id { get; set; }
-        public string Country { get; set; } = string.Empty;
+        //public int Id { get; set; }
+        //public string Country { get; set; } = string.Empty;
 
         //public ICollection<Developer> Developers { get; set; }
 
@@ -18,6 +18,15 @@ namespace cqrsMediator.Domain.Entities
         /// <summary>
         /// OR  below options
         /// </summary>
-        public ICollection<Developer> Developer { get; set; } = new List<Developer>();
+        //public ICollection<Developer> Developer { get; set; }
+
+        public int Id { get; set; }
+        public string Country { get; set; } = string.Empty;
+
+
+
+        //navigate the property for related developer
+
+        public ICollection<Developer> Developers { get; set; }
     }
 }

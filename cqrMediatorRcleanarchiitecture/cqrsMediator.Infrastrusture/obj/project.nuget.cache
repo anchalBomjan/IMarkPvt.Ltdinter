@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s/DjXjfXjegGw1w4MXxqshsJEL/SkGXmgKxrf6Ewdw7fpguopMEADjhi9XTsge33ULGcG9jvAtYIYs0rNssc6Q==",
+  "dgSpecHash": "yxmb6/7vKG54x4G4/nki9j+/RuGO8aBRvfh+UEoBR9sH1UMi5BQ+NX7vDOOHSx5m1lit/IlD2umu5pLBNvk59Q==",
   "success": true,
   "projectFilePath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anchal\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
-    "C:\\Users\\Anchal\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
-    "C:\\Users\\Anchal\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

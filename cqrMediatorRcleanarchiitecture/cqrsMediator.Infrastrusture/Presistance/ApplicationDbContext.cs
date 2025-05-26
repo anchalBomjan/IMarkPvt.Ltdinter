@@ -17,7 +17,6 @@ namespace cqrsMediator.Infrastrusture.Presistance
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             //seeding Data dor Address Table
             modelBuilder.Entity<Address>().HasData(
 
@@ -46,9 +45,10 @@ namespace cqrsMediator.Infrastrusture.Presistance
             //  Above  line of code helps to set null for adderessId in developer tbl which is  primarykey of address Tbl 
             base.OnModelCreating(modelBuilder);
 
-        
 
-          
+
+
+
         }
 
         public DbSet<Address> Addresses { get; set; }
