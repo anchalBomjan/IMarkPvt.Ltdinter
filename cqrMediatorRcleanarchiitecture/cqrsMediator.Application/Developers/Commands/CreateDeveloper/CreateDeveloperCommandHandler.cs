@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Developers.Commands.CreateDeveloper
 {
+
     public sealed class CreateDeveloperCommandHandler(ApplicationDbContext context) : IRequestHandler<CreateDeveloperCommand, int>
     {
         public async Task<int> Handle(CreateDeveloperCommand request, CancellationToken ct)

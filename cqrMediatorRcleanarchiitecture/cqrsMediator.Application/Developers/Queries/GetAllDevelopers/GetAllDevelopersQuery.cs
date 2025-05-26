@@ -12,4 +12,7 @@ namespace cqrsMediator.Application.Developers.Queries.GetAllDevelopers
 
     public record GetAllDevelopersQuery : IRequest<List<DeveloperDTO>>;
 
+
+
+
 }
