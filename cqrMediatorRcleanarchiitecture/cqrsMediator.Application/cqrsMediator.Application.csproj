@@ -7,11 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Address\Commands\CreateAddress\" />
-    <Folder Include="Address\Commands\DeleteAddress\" />
-    <Folder Include="Address\Commands\UpdateAddress\" />
-    <Folder Include="Address\Queries\GetAllAddress\" />
-    <Folder Include="Address\Queries\GetAddressById\" />
+    <Folder Include="Addresses\Commands\DeleteAddress\" />
+    <Folder Include="Addresses\Commands\UpdateAddress\" />
+    <Folder Include="Addresses\Queries\GetAllAddress\" />
+    <Folder Include="Addresses\Queries\GetAddressById\" />
   </ItemGroup>
 
   <ItemGroup>
