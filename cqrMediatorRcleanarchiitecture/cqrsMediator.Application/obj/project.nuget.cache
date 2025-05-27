@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "GTj/8pPiL3C/bHBx0uiGDRbQzl1PJciSj1TrH8aiM0F/djrajZHeQa/pqGgC48H9H74FyRO/q9dOXQ4hSXUo9g==",
+  "dgSpecHash": "3OaDhBR1GH1m1ZxO7/dfJBn6TWaFaB5C9PIOe/UeB/Nq3aO78EAJKPd1lfuOGSWWPZotW2eD1hAVHMvbHKd+fA==",
   "success": true,
   "projectFilePath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anchal\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Anchal\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\Anchal\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0\\fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
