@@ -13,7 +13,11 @@ namespace cqrsMediator.Application.DTOs
         public string Email { get; set; }= string.Empty;
         public decimal EstimateIncome { get; set; }
         public int YearsOfExperience { get; set; }
+        // int? AddressId { get; set; }
       
         public AddressDTO ?Address { get; set; }
+
+
+
     }
 }

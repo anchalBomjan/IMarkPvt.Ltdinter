@@ -14,3 +14,5 @@ D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\refint\cqrsMediator.Infrastrusture.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.pdb
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\ref\cqrsMediator.Infrastrusture.dll
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Infrastrusture.runtimeconfig.json
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.genruntimeconfig.cache

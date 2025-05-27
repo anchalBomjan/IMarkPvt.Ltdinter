@@ -3,6 +3,7 @@ using cqrsMediator.Application.Addresses.Commands.DeleteAddress;
 using cqrsMediator.Application.Addresses.Commands.UpdateAddress;
 using cqrsMediator.Application.Addresses.Queries.GetAddressById;
 using cqrsMediator.Application.Addresses.Queries.GetAllAddress;
+using cqrsMediator.Application.Developers.Commands.UpdateDeveloper;
 using cqrsMediator.Application.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -57,6 +58,8 @@ namespace cqrsMediatorWeb.Api.Controllers
             await _mediator.Send(command);
             return NoContent();
         }
+
+
 
         // DELETE: api/Addresses/5
         [HttpDelete("{id}")]

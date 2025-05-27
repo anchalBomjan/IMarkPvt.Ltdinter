@@ -9,13 +9,13 @@ namespace cqrsMediator.Application.Developers.Commands.UpdateDeveloper
 {
     public record UpdateDeveloperCommand(
 
-        int Id,
+       int Id,
         string Name,
         string Email,
         int YearsOfExperience,
         decimal EstimateIncome,
         int? AddressId
-
+        
 
         ) : IRequest;
 
