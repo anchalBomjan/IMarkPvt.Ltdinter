@@ -2,7 +2,9 @@
 using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Application.Common.Mappings;
 using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
+using cqrsMediator.Domain.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
+using cqrsMediator.Infrastrusture.Repositories;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -17,6 +19,7 @@ namespace cqrMediatorRcleanarchiitecture
             var builder = WebApplication.CreateBuilder(args);
 
             //1  Add services to the container.
+            builder.Services.AddScoped<IDeveloperRepository, GetAllDeveloperByAddressIdRepository>();
 
             builder.Services.AddControllers();
           

@@ -218,6 +218,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "cqrsMediatorWeb.Api.Controllers.DevelopersController",
+    "Method": "GetAllDeveloperByAddressId",
+    "RelativePath": "api/Developers/by-address/{addressId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addressId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cqrsMediator.Application.DTOs.DeveloperDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "cqrMediatorRcleanarchiitecture.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

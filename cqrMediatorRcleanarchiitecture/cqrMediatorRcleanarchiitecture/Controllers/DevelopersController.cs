@@ -1,6 +1,7 @@
 ﻿using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
 using cqrsMediator.Application.Developers.Commands.DeleteDeveloper;
 using cqrsMediator.Application.Developers.Commands.UpdateDeveloper;
+using cqrsMediator.Application.Developers.Queries.GetAllDeveloperByAddressIdQuery;
 using cqrsMediator.Application.Developers.Queries.GetAllDeveloperById;
 using cqrsMediator.Application.Developers.Queries.GetAllDevelopers;
 using cqrsMediator.Application.DTOs;
@@ -36,6 +37,15 @@ namespace cqrsMediatorWeb.Api.Controllers
             var developer = await _mediator.Send(new GetDeveloperByIdQuery(id));
             return developer != null ? Ok(developer) : NotFound();
         }
+        [HttpGet("by-address/{addressId}")]
+        public async Task<ActionResult<DeveloperDTO>>GetAllDeveloperByAddressId(int addressId)
+        {
+            var query=new GetAllDeveloperByAddressIdQuery(addressId);
+            var result=await _mediator.Send(query);
+            return Ok(result);
+        }
+
+
 
         // POST: api/Developers
         [HttpPost]
