@@ -1,10 +1,12 @@
 
+using cqrsMediator.Application.Common.Behaviors;
 using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Application.Common.Mappings;
 using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
 using cqrsMediator.Domain.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
 using cqrsMediator.Infrastrusture.Repositories;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,12 @@ namespace cqrMediatorRcleanarchiitecture
 
             //1  Add services to the container.
             builder.Services.AddScoped<IDeveloperRepository, GetAllDeveloperByAddressIdRepository>();
-           /// builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(IPipelineBehavior<,>));
+            //  — Register the actual ValidationBehavior implementation
+            builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            builder.Services.AddValidatorsFromAssemblyContaining<CreateDeveloperCommandValidator>();
+
+
+            //builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(IPipelineBehavior<,>));
 
             builder.Services.AddControllers();
           
