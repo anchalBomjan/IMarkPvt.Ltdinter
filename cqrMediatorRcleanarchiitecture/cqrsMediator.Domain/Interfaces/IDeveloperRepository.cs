@@ -1,14 +1,9 @@
 ﻿using cqrsMediator.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace cqrsMediator.Domain.Interfaces
 {
-    public  interface IDeveloperRepository
+    public interface IDeveloperRepository
     {
-        Task<IEnumerable<Developer>> GetAllDeveloperByAddressIdAsync(int addressId,CancellationToken ct);
+        Task<IEnumerable<Developer>> GetAllDeveloperByAddressIdAsync(int addressId, CancellationToken ct);
     }
 }
