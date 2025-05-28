@@ -5,6 +5,7 @@ using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
 using cqrsMediator.Domain.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
 using cqrsMediator.Infrastrusture.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -20,6 +21,7 @@ namespace cqrMediatorRcleanarchiitecture
 
             //1  Add services to the container.
             builder.Services.AddScoped<IDeveloperRepository, GetAllDeveloperByAddressIdRepository>();
+           /// builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(IPipelineBehavior<,>));
 
             builder.Services.AddControllers();
           
@@ -47,6 +49,8 @@ namespace cqrMediatorRcleanarchiitecture
             //6 Add CORS if needed
 
             var app = builder.Build();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             // middleware pipeline  configuration
             //1 Global Exception handling

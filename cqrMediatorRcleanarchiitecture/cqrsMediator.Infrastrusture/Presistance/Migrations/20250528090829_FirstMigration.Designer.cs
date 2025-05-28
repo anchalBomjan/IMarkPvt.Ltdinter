@@ -12,7 +12,7 @@ using cqrsMediator.Infrastrusture.Presistance;
 namespace cqrsMediator.Infrastrusture.Presistance.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250527053323_FirstMigration")]
+    [Migration("20250528090829_FirstMigration")]
     partial class FirstMigration
     {
         /// <inheritdoc />

@@ -1,11 +1,7 @@
 ﻿using cqrsMediator.Domain.Entities;
 using cqrsMediator.Infrastrusture.Presistance;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace cqrsMediator.Application.Developers.Commands.CreateDeveloper
 {
@@ -14,6 +10,11 @@ namespace cqrsMediator.Application.Developers.Commands.CreateDeveloper
     {
         public async Task<int> Handle(CreateDeveloperCommand request, CancellationToken ct)
         {
+
+
+            //validation email here
+         
+
             var developer = new Developer
             {
                 Name = request.Name,

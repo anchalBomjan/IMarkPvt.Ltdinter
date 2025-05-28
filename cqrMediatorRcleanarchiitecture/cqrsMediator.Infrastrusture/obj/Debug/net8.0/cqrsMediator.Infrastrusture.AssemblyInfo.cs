@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cqrsMediator.Infrastrusture")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75c5c78d16594615614948ba64b773c5e4ad63e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86da4afe0c2574317cfae82d68a8bf6d2c3bd339")]
 [assembly: System.Reflection.AssemblyProductAttribute("cqrsMediator.Infrastrusture")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cqrsMediator.Infrastrusture")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
