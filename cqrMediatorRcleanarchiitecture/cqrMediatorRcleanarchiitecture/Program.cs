@@ -3,6 +3,7 @@ using cqrsMediator.Application.Common.Behaviors;
 using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Application.Common.Mappings;
 using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
+
 using cqrsMediator.Domain.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
 using cqrsMediator.Infrastrusture.Repositories;
@@ -46,6 +47,8 @@ namespace cqrMediatorRcleanarchiitecture
             // 5 — Register validation Pipeline behaviour 
             builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             builder.Services.AddValidatorsFromAssemblyContaining<CreateDeveloperCommandValidator>();
+          
+
             //6: automapper
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 

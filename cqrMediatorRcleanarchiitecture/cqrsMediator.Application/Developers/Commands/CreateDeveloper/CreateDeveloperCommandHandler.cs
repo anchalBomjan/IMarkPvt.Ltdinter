@@ -12,9 +12,7 @@ namespace cqrsMediator.Application.Developers.Commands.CreateDeveloper
         {
 
 
-            //validation email here
-         
-
+  
             var developer = new Developer
             {
                 Name = request.Name,
