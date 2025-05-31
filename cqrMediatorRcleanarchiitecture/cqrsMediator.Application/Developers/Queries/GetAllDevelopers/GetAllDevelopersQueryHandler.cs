@@ -20,9 +20,7 @@ namespace cqrsMediator.Application.Developers.Queries.GetAllDevelopers
         
         public async Task<List<DeveloperDTO>> Handle( GetAllDevelopersQuery request,CancellationToken cancellationToken)
         {
-            //return await _context.Developers
-            //    .ProjectTo<DeveloperDTO>(_mapper.ConfigurationProvider)
-            //    .ToListAsync(cancellationToken);
+           
 
             var developers = await _context.Developers
              .ProjectTo<DeveloperDTO>(_mapper.ConfigurationProvider)
