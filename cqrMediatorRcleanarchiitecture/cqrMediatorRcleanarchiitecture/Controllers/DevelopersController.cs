@@ -49,10 +49,14 @@ namespace cqrsMediatorWeb.Api.Controllers
 
         // POST: api/Developers
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<int>> Create([FromBody] CreateDeveloperCommand command)
         {
             var id = await _mediator.Send(command);
             return CreatedAtAction(nameof(GetById), new { id }, id);
+
+
+
         }
 
         // PUT: api/Developers/5

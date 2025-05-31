@@ -9,6 +9,7 @@ using cqrsMediator.Infrastrusture.Repositories;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
@@ -23,70 +24,47 @@ namespace cqrMediatorRcleanarchiitecture
 
             //1  Add services to the container.
             builder.Services.AddScoped<IDeveloperRepository, GetAllDeveloperByAddressIdRepository>();
-            //  — Register the actual ValidationBehavior implementation
-            builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-            builder.Services.AddValidatorsFromAssemblyContaining<CreateDeveloperCommandValidator>();
-
-
-            //builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(IPipelineBehavior<,>));
-
+            
+         
+            // 2: Add controllers
             builder.Services.AddControllers();
-          
 
-            // 2. Add MediatR
+            // 3. Configure API behavior options (MUST come right after AddControllers)
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+
+            // 4: Add MediatR
             builder.Services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssemblies(
                typeof(Program).Assembly,                  // Web API assembly
               typeof(CreateDeveloperCommand).Assembly    // Application assembly
                  ));
 
-            //3
+
+            // 5 — Register validation Pipeline behaviour 
+            builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            builder.Services.AddValidatorsFromAssemblyContaining<CreateDeveloperCommandValidator>();
+            //6: automapper
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-            //4 injecting ApplicationDbContext
+            //7 injecting ApplicationDbContext
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            
 
-           // 5  Add swagger and OpenService
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            //8  Add swagger and OpenService
+            //9 Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             //6 Add CORS if needed
 
             var app = builder.Build();
 
-            app.UseMiddleware<ExceptionHandlingMiddleware>();
-
-            // middleware pipeline  configuration
-            //1 Global Exception handling
-            // 1. Global Exception Handling
-            //app.UseExceptionHandler(errorApp =>
-            //{
-            //    errorApp.Run(async context =>
-            //    {
-            //        context.Response.ContentType = "application/json";
-            //        var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
-
-            //        switch (exceptionHandlerFeature?.Error)
-            //        {
-            //            case NotFoundException notFoundEx:
-            //                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
-            //                await context.Response.WriteAsync(notFoundEx.Message);
-            //                break;
-            //            case ValidationException validationEx:
-            //                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-            //                await context.Response.WriteAsJsonAsync(validationEx.Errors);
-            //                break;
-            //            default:
-            //                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-            //                await context.Response.WriteAsync("An unexpected error occurred");
-            //                break;
-            //        }
-            //    });
-            //});
-
+            // 1 Exception handling First
+            app.UseMiddleware<ExceptionHandlingMiddleware>(); // this must include at first for all validation services added
 
 
 
@@ -99,7 +77,7 @@ namespace cqrMediatorRcleanarchiitecture
                 app.UseSwaggerUI();
             }
             //3 apply security  middleware
-           // app.UseCors("AllowAll"); // If CORS is needed
+            // app.UseCors("AllowAll"); // If CORS is needed
             app.UseHttpsRedirection();
 
             //4 authorization and authentication
@@ -130,3 +108,8 @@ namespace cqrMediatorRcleanarchiitecture
         }
     }
 }
+
+
+
+
+
