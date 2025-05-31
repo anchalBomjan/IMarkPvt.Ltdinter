@@ -85,7 +85,7 @@ namespace cqrMediatorRcleanarchiitecture
             //3 apply security  middleware
             // app.UseCors("AllowAll"); // If CORS is needed
             app.UseHttpsRedirection();
-
+            
             //4 authorization and authentication
             app.UseAuthentication();
             app.UseAuthorization();
