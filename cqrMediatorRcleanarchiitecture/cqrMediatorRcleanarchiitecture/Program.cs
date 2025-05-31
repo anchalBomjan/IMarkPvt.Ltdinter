@@ -1,4 +1,5 @@
 
+using cqrsMediator.Application.Addresses.Commands.CreateAddress;
 using cqrsMediator.Application.Common.Behaviors;
 using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Application.Common.Mappings;
@@ -40,14 +41,16 @@ namespace cqrMediatorRcleanarchiitecture
             builder.Services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssemblies(
                typeof(Program).Assembly,                  // Web API assembly
-              typeof(CreateDeveloperCommand).Assembly    // Application assembly
+              typeof(CreateDeveloperCommand).Assembly,   // Application assembly
+              typeof(CreateAddressCommand).Assembly
                  ));
 
 
             // 5 — Register validation Pipeline behaviour 
             builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             builder.Services.AddValidatorsFromAssemblyContaining<CreateDeveloperCommandValidator>();
-          
+           builder.Services.AddValidatorsFromAssemblyContaining<CreateAddressCommandValidator>();
+
 
             //6: automapper
             builder.Services.AddAutoMapper(typeof(MappingProfile));

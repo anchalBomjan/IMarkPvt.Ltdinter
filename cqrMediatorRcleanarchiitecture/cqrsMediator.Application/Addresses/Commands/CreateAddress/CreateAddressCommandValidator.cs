@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Addresses.Commands.CreateAddress
 {
-    sealed class CreateAddressCommandValidator:AbstractValidator<CreateAddressCommand>
+    public  class CreateAddressCommandValidator:AbstractValidator<CreateAddressCommand>
     {
 
         private static readonly HashSet<string> BlockedCountries = new()

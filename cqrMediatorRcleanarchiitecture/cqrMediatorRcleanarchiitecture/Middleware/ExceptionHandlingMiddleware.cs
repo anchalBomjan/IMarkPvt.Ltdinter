@@ -79,6 +79,8 @@ public class ExceptionHandlingMiddleware
             Details = details,
             Timestamp = DateTime.UtcNow
         }));
+
+
     }
 
     private static IDictionary<string, string[]> HandleValidationError(ValidationException ex)
