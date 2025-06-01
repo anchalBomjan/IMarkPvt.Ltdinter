@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordering.Infrastructure.Repositories.Command.Base
+namespace Odering.Core.Repositories.Command.Base
 {
-    public  interface ICommandRepository<T> where T:class
+    public  interface ICommandRepository<T> where T : class
     {
 
         Task<T> AddAsync(T entity);
-        Task UpdateAsync(T entitiy);
+        Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
-         
     }
 }

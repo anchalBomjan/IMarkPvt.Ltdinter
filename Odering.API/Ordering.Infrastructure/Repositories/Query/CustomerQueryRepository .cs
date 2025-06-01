@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
 using Odering.Core.Entities;
+using Odering.Core.Repositories.Query;
 using Ordering.Infrastructure.Repositories.Query.Base;
 using System;
 using System.Collections.Generic;
@@ -73,8 +74,7 @@ namespace Ordering.Infrastructure.Repositories.Query
                 throw new Exception(exp.Message, exp);
             }
         }
-
-
     }
+
 
 }

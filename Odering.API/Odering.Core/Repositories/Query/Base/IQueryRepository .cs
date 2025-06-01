@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordering.Infrastructure.Repositories.Query.Base
+namespace Odering.Core.Repositories.Query.Base
 {
     public interface IQueryRepository<T> where T : class
     {
-        //Generic repository for all if any
-
+        // Generic repository for all if any
     }
-    
-  
 }

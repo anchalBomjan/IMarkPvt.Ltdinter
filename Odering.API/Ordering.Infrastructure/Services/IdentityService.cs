@@ -17,16 +17,16 @@ namespace Ordering.Infrastructure.Services
     public class IdentityService : IIdentityService
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly  SignInManager<ApplicationUser> _signInManager;
-        private readonly  RoleManager<IdentityRole> _roleManager;
-        public IdentityService(UserManager<ApplicationUser> userManager,SignInManager<ApplicationUser> signInManager,RoleManager<IdentityRole> roleManager)
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        public IdentityService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
-
+            _roleManager = roleManager;
         }
-
 
         public async Task<bool> AssignUserToRole(string userName, IList<string> roles)
         {
@@ -52,7 +52,6 @@ namespace Ordering.Infrastructure.Services
 
 
         // Return multiple value
-        // Return multiple value
         public async Task<(bool isSucceed, string userId)> CreateUserAsync(string userName, string password, string email, string fullName, List<string> roles)
         {
             var user = new ApplicationUser()
@@ -76,7 +75,6 @@ namespace Ordering.Infrastructure.Services
             }
             return (result.Succeeded, user.Id);
         }
-
 
         public async Task<bool> DeleteRoleAsync(string roleId)
         {
@@ -266,7 +264,6 @@ namespace Ordering.Infrastructure.Services
 
             return result.Succeeded;
         }
-
     }
 
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Odering.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75b65da30eb997e99ae12eb184fa27e43e2e3f84")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1662d3b46714f448654954e16fb8a97736a4c34b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Odering.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Odering.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

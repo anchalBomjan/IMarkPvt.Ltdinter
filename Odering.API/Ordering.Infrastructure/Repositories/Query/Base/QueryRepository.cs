@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Odering.Core.Repositories.Query.Base;
 using Ordering.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +17,6 @@ namespace Ordering.Infrastructure.Repositories.Query.Base
 
         }
     }
+
 
 }
