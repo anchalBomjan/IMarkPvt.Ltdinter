@@ -1,0 +1,15 @@
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\bin\Debug\net8.0\Ordering.Infrastructure.deps.json
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\bin\Debug\net8.0\Ordering.Infrastructure.runtimeconfig.json
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\bin\Debug\net8.0\Ordering.Infrastructure.dll
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\bin\Debug\net8.0\Ordering.Infrastructure.pdb
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.csproj.AssemblyReference.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.AssemblyInfoInputs.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.AssemblyInfo.cs
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.csproj.CoreCompileInputs.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.sourcelink.json
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.dll
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\refint\Ordering.Infrastructure.dll
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.pdb
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\Ordering.Infrastructure.genruntimeconfig.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Ordering.Infrastructure\obj\Debug\net8.0\ref\Ordering.Infrastructure.dll

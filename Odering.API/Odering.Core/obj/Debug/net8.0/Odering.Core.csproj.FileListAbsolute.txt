@@ -1,0 +1,12 @@
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\bin\Debug\net8.0\Odering.Core.deps.json
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\bin\Debug\net8.0\Odering.Core.dll
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\bin\Debug\net8.0\Odering.Core.pdb
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.AssemblyInfoInputs.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.AssemblyInfo.cs
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.csproj.CoreCompileInputs.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.sourcelink.json
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.dll
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\refint\Odering.Core.dll
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\Odering.Core.pdb
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.Core\obj\Debug\net8.0\ref\Odering.Core.dll
