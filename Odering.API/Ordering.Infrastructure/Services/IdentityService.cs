@@ -3,11 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Odering.Application.Common.Exceptions;
 using Odering.Application.Common.Interface;
 using Ordering.Infrastructure.Identity;
+
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ValidationException = Odering.Application.Common.Exceptions.ValidationException;
 
 namespace Ordering.Infrastructure.Services
 {
@@ -32,86 +35,202 @@ namespace Ordering.Infrastructure.Services
             }
             var result= await _userManager.AddToRolesAsync(user, roles);
             return result.Succeeded;
+
         }
 
-        public Task<bool> CreateRoleAsync(string roleName)
+        public  async Task<bool> CreateRoleAsync(string roleName)
         {
-            throw new NotImplementedException();
+            var result = await _roleManager.CreateAsync(new IdentityRole(roleName));
+            if(!result.Succeeded)
+            {
+                throw new ValidationException(result.Errors);
+
+            }
+            return result.Succeeded;
         }
 
-        public Task<(bool isSucceed, string usedId)> CreateUserAsync(string userName, string password, string email, string fullName, List<string> roles)
+        public async Task<(bool isSucceed, string usedId)> CreateUserAsync(string userName, string password, string email, string fullName, List<string> roles)
         {
-            throw new NotImplementedException();
+            var user = new ApplicationUser()
+            {
+                FullName = userName,
+                UserName = userName,
+                Email = email
+            };
+            var result = await _userManager.CreateAsync(user, password);
+            if(!result.Succeeded)
+            {
+                throw new ValidationException(result.Errors);
+            }
+            return (result.Succeeded, user.Id);
         }
 
-        public Task<bool> DeleteRoleAsync(string roleId)
+        public async Task<bool> DeleteRoleAsync(string roleId)
         {
-            throw new NotImplementedException();
+             var roleDetails= await _roleManager.FindByIdAsync(roleId);
+            if(roleDetails == null)
+            {
+                throw new NotFoundException("Role not found");
+
+            }
+            if (roleDetails.Name == "Administrator")
+            {
+                throw new BadRequestException("You can not delelte Administrator Role");
+
+            }
+            var result= await _roleManager.DeleteAsync(roleDetails);
+            if(!result.Succeeded)
+            {
+                throw new ValidationException(result.Errors);
+            }
+            return result.Succeeded;
         }
 
-        public Task<bool> DeleteUserAsync(string userId)
+        public async  Task<bool> DeleteUserAsync(string userId)
         {
-            throw new NotImplementedException();
+
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+                //throw new Exception("User not found");
+            }
+
+            if (user.UserName == "system" || user.UserName == "admin")
+            {
+                throw new Exception("You can not delete system or admin user");
+                //throw new BadRequestException("You can not delete system or admin user");
+            }
+            var result = await _userManager.DeleteAsync(user);
+            return result.Succeeded;
+
+
+
+
         }
 
-        public Task<List<(string id, string fullName, string userName, string email)>> GetAllUsersAsync()
+        public  async  Task<List<(string id, string fullName, string userName, string email)>> GetAllUsersAsync()
         {
-            throw new NotImplementedException();
+            var users = await _userManager.Users.Select(x => new
+            {
+                x.Id,
+                x.FullName,
+                x.UserName,
+                x.Email
+            }).ToListAsync();
+
+            return users.Select(user => (user.Id, user.FullName, user.UserName, user.Email)).ToList();
         }
 
         public Task<List<(string id, string userName, string email, IList<string> roles)>> GetAllUsersDetailsAsync()
         {
             throw new NotImplementedException();
+
+            //var roles = await _userManager.GetRolesAsync(user);
+            //return (user.Id, user.UserName, user.Email, roles);
+
+            //var users = _userManager.Users.ToListAsync();
+
         }
 
-        public Task<(string id, string roleName)> GetRoleByIdAsync(string id)
+
+        public   async Task<List<(string id, string roleName)>> GetRolesAsync()
         {
-            throw new NotImplementedException();
+            var roles = await _roleManager.Roles.Select(x => new
+            {
+                x.Id,
+                x.Name
+            }).ToListAsync();
+
+            return roles.Select(role => (role.Id, role.Name)).ToList();
         }
 
-        public Task<List<(string id, string roleName)>> GetRolesAsync()
+        public async Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsByUserNameAsync(string userName)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == userName);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+            }
+            var roles = await _userManager.GetRolesAsync(user);
+            return (user.Id, user.FullName, user.UserName, user.Email, roles);
+
         }
+        public  async Task<(string id, string roleName)> GetRoleByIdAsync(string id)
+        {
+            
+        }
+
+      
 
         public Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsAsync(string userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsByUserNameAsync(string userName)
+     
+
+        public async  Task<string> GetUserIdAsync(string userName)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == userName);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+                //throw new Exception("User not found");
+            }
+            return await _userManager.GetUserIdAsync(user);
+
         }
 
-        public Task<string> GetUserIdAsync(string userName)
+        public async  Task<string> GetUserNameAsync(string userId)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+                //throw new Exception("User not found");
+            }
+            return await _userManager.GetUserNameAsync(user);
+
+
         }
 
-        public Task<string> GetUserNameAsync(string userId)
+        public  async Task<List<string>> GetUserRolesAsync(string userId)
         {
-            throw new NotImplementedException();
+
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+            }
+            var roles = await _userManager.GetRolesAsync(user);
+            return roles.ToList();
+
         }
 
-        public Task<List<string>> GetUserRolesAsync(string userId)
+        public  async Task<bool> IsInRoleAsync(string userId, string role)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
+
+            if (user == null)
+            {
+                throw new NotFoundException("User not found");
+            }
+            return await _userManager.IsInRoleAsync(user, role);
         }
 
-        public Task<bool> IsInRoleAsync(string userId, string role)
+        public  async Task<bool> IsUniqueUserName(string userName)
         {
-            throw new NotImplementedException();
+            return await _userManager.FindByIdAsync(userName) == null;
+         
         }
 
-        public Task<bool> IsUniqueUserName(string userName)
+        public async  Task<bool> SigninUserAsync(string userName, string password)
         {
-            throw new NotImplementedException();
-        }
+            var result = await _signInManager.PasswordSignInAsync(userName, password, true, false);
+            return result.Succeeded;
 
-        public Task<bool> SigninUserAsync(string userName, string password)
-        {
-            throw new NotImplementedException();
+
         }
 
         public Task<bool> UpdateRole(string id, string roleName)
