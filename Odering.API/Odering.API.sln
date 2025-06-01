@@ -3,15 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odering.API", "Odering.API\Odering.API.csproj", "{4B7F776D-18B8-4861-B996-9AD85A273370}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odering.API", "Odering.API\Odering.API.csproj", "{4B7F776D-18B8-4861-B996-9AD85A273370}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odering.Application", "Odering.Application\Odering.Application.csproj", "{7BF2041A-41F4-48E9-8419-D242A310FBF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odering.Application", "Odering.Application\Odering.Application.csproj", "{7BF2041A-41F4-48E9-8419-D242A310FBF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odering.Core", "Odering.Core\Odering.Core.csproj", "{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odering.Core", "Odering.Core\Odering.Core.csproj", "{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{A54C0021-044A-4F20-ADD5-9982A4BA7954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{A54C0021-044A-4F20-ADD5-9982A4BA7954}"
 	ProjectSection(ProjectDependencies) = postProject
 		{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3} = {772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}
+		{7BF2041A-41F4-48E9-8419-D242A310FBF6} = {7BF2041A-41F4-48E9-8419-D242A310FBF6}
 	EndProjectSection
 EndProject
 Global

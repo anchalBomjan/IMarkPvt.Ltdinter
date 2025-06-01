@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Odering.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7f656eb4ff1e7e651678d31e1ffdab3406b51b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75b65da30eb997e99ae12eb184fa27e43e2e3f84")]
 [assembly: System.Reflection.AssemblyProductAttribute("Odering.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Odering.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Odering.Application\Odering.Application.csproj" />
     <ProjectReference Include="..\Odering.Core\Odering.Core.csproj" />
   </ItemGroup>
 
