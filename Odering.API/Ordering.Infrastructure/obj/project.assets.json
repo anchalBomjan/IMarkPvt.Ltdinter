@@ -1613,6 +1613,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Odering.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Odering.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Odering.Core.dll": {}
+        }
       }
     }
   },
@@ -3812,6 +3822,11 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Odering.Core/1.0.0": {
+      "type": "project",
+      "path": "../Odering.Core/Odering.Core.csproj",
+      "msbuildProject": "../Odering.Core/Odering.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3825,7 +3840,8 @@
       "Microsoft.EntityFrameworkCore.Relational >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
-      "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0"
+      "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0",
+      "Odering.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3854,7 +3870,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj": {
+              "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
