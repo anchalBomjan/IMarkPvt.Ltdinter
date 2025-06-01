@@ -11,7 +11,7 @@ namespace Ordering.Infrastructure.Repositories.Command.Base
 
         Task<T> AddAsync(T entity);
         Task UpdateAsync(T entitiy);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(T entity);
          
     }
 }
