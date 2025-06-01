@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Core.Repositories.Command
+namespace Ordering.Infrastructure.Repositories.Command
 {
-    internal interface ICustomerCommandRepository
+    public interface ICustomerCommandRepository
     {
+
+
     }
 }
