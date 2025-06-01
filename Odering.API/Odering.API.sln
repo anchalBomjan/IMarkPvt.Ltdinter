@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odering.Core", "Odering.Core\Odering.Core.csproj", "{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{A54C0021-044A-4F20-ADD5-9982A4BA7954}"
+	ProjectSection(ProjectDependencies) = postProject
+		{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3} = {772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
