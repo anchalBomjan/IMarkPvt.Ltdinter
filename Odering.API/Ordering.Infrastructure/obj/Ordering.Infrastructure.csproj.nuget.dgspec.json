@@ -27,7 +27,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
