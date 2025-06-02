@@ -15,5 +15,9 @@ namespace Odering.Application.DTOs
         public string Email { get; set; }
         public string ContactNumber { get; set; }
         public string Address { get; set; }
+       // public string RoleName { get; internal set; }
+        ////
+        ///add RoleId and RoleName
+
     }
 }
