@@ -28,4 +28,5 @@ namespace Ordering.Application.Queries.Role
             return roles.Select(role => new RoleResponseDTO() { Id = role.id, RoleName = role.roleName }).ToList();
         }
     }
+
 }
