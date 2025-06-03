@@ -55,6 +55,9 @@ namespace Ordering.API
            // builder.Services.AddSingleton<ITokenGenerator>( new TokenGenerator(_key,_issuer,_audience,_expirtyMinutes));
            builder.Services.AddSingleton<ITokenGenerator>(new TokenGenerator(_key,_issuer,_audience,_expirtyMinutes));
 
+
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
