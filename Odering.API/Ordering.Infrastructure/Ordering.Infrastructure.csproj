@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Odering.Application\Odering.Application.csproj" />
-    <ProjectReference Include="..\Odering.Core\Odering.Core.csproj" />
+    <ProjectReference Include="..\Odering.Application\Ordering.Application.csproj" />
+    <ProjectReference Include="..\Odering.Core\Ordering.Core.csproj" />
   </ItemGroup>
 
 </Project>

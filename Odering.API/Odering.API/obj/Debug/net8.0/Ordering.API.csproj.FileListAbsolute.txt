@@ -1,0 +1,7 @@
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.csproj.AssemblyReference.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.AssemblyInfoInputs.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.AssemblyInfo.cs
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.csproj.CoreCompileInputs.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.MvcApplicationPartsAssemblyInfo.cache
+D:\IMarkPvt.Ltdinter\Odering.API\Odering.API\obj\Debug\net8.0\Ordering.API.sourcelink.json
