@@ -9,6 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "Odering.API
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Odering.Application\Ordering.Application.csproj", "{7BF2041A-41F4-48E9-8419-D242A310FBF6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3} = {772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Core", "Odering.Core\Ordering.Core.csproj", "{772EF750-FEBA-4A63-AF1B-B2C69C77B5E3}"
 EndProject

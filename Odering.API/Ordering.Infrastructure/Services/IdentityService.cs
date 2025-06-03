@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ValidationException = Odering.Application.Common.Exceptions.ValidationException;
+using ValidationException = Ordering.Application.Common.Exceptions.ValidationException;
 
 namespace Ordering.Infrastructure.Services
 {

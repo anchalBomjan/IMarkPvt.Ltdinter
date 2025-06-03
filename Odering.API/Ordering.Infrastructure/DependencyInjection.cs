@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Odering.Application.Common.Interface;
+using Ordering.Application.Common.Interface;
 using Ordering.Infrastructure.Data;
 using Ordering.Infrastructure.Identity;
 using Ordering.Infrastructure.Repositories.Command.Base;
