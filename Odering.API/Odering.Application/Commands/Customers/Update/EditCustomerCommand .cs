@@ -1,15 +1,16 @@
 ﻿using MediatR;
-using Odering.Application.DTOs;
-using Odering.Core.Entities;
-using Odering.Core.Repositories.Command;
-using Odering.Core.Repositories.Query;
+using Ordering.Application.DTOs;
+using Ordering.Application.Mapper;
+using Ordering.Core.Entities;
+using Ordering.Core.Repositories.Command;
+using Ordering.Core.Repositories.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Commands.Customers.Update
+namespace Ordering.Application.Commands.Customers.Update
 {
     // Customer create command with CustomerResponse
     public class EditCustomerCommand : IRequest<CustomerResponse>

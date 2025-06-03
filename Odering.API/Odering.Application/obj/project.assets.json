@@ -332,14 +332,14 @@
           }
         }
       },
-      "Odering.Core/1.0.0": {
+      "Ordering.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/Odering.Core.dll": {}
+          "bin/placeholder/Ordering.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Odering.Core.dll": {}
+          "bin/placeholder/Ordering.Core.dll": {}
         }
       }
     }
@@ -870,10 +870,10 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
-    "Odering.Core/1.0.0": {
+    "Ordering.Core/1.0.0": {
       "type": "project",
-      "path": "../Odering.Core/Odering.Core.csproj",
-      "msbuildProject": "../Odering.Core/Odering.Core.csproj"
+      "path": "../Odering.Core/Ordering.Core.csproj",
+      "msbuildProject": "../Odering.Core/Ordering.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -885,7 +885,7 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.0",
       "Microsoft.Extensions.Identity.Core >= 8.0.0",
       "Microsoft.IdentityModel.Tokens >= 8.1.1",
-      "Odering.Core >= 1.0.0",
+      "Ordering.Core >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 8.1.1"
     ]
   },
@@ -895,9 +895,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj",
-      "projectName": "Odering.Application",
-      "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj",
+      "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj",
+      "projectName": "Ordering.Application",
+      "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj",
       "packagesPath": "C:\\Users\\Anchal\\.nuget\\packages\\",
       "outputPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\obj\\",
       "projectStyle": "PackageReference",
@@ -916,8 +916,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj": {
-              "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj"
+            "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj": {
+              "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj"
             }
           }
         }

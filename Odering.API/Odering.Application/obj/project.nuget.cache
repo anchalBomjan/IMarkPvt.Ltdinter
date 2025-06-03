@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MdnrZFnskBMdb2BGbaDghryz7Km13vsUDWo1axJr33b9EJldMYyLSihXlQxgKNHiOZgKPz3if0VECRK1XEz3jg==",
+  "dgSpecHash": "EjRpQ4r2uq/RS5+bmgs7V6a6z7HTXSTagWFt9adEyBMVX5gUqKzx8ICntIl9XXx+uziFM+SHXO/VIhiw0ZNXXw==",
   "success": true,
-  "projectFilePath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj",
+  "projectFilePath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anchal\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",

@@ -1,5 +1,5 @@
-﻿using Odering.Core.Entities;
-using Odering.Core.Repositories.Command;
+﻿using Ordering.Core.Entities;
+using Ordering.Core.Repositories.Command;
 using Ordering.Infrastructure.Data;
 using Ordering.Infrastructure.Repositories.Command.Base;
 using System;

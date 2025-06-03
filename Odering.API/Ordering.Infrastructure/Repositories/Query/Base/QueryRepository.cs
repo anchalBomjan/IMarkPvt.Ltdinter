@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Odering.Core.Repositories.Query.Base;
+using Ordering.Core.Repositories.Query.Base;
 using Ordering.Infrastructure.Data;
 using System;
 using System.Collections.Generic;

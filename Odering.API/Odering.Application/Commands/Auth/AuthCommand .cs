@@ -1,14 +1,14 @@
 ﻿using MediatR;
-using Odering.Application.Common.Exceptions;
-using Odering.Application.Common.Interface;
-using Odering.Application.DTOs;
+using Ordering.Application.Common.Interface;
+using Ordering.Application.Common.Exceptions;
+using Ordering.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Commands.Auth
+namespace Ordering.Application.Commands.Auth
 {
     public class AuthCommand : IRequest<AuthResponseDTO>
     {

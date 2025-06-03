@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Odering.Application.Commands.Customers.Create;
-using Odering.Application.Commands.Customers.Update;
-using Odering.Application.DTOs;
-using Odering.Core.Entities;
+using Ordering.Application.Commands.Customers.Create;
+using Ordering.Application.Commands.Customers.Update;
+using Ordering.Application.DTOs;
+using Ordering.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

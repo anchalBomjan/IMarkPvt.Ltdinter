@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj",
-      "projectName": "Odering.Core",
-      "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj",
+      "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj",
+      "projectName": "Ordering.Core",
+      "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj",
       "packagesPath": "C:\\Users\\Anchal\\.nuget\\packages\\",
       "outputPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\obj\\",
       "projectStyle": "PackageReference",

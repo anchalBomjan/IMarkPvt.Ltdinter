@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P7nghDkWrODIibsauAXP6GjKv3AKRmDR9d9rKisEoH34M21CDhOitFAZ3hWcgQ3vTiohZeGzo4bAHrEXML3I0w==",
+  "dgSpecHash": "lv51vEHKadsKFWf/5iLPMIHktL9+zdfnu2LPlqxjWNebdtU2k3qiHf/eiiwT995bzCyDWT9wPp4EM0k0BJVF/g==",
   "success": true,
-  "projectFilePath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.API\\Odering.API.csproj",
+  "projectFilePath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.API\\Ordering.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anchal\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

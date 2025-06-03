@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Core.Repositories.Command.Base
+namespace Ordering.Core.Repositories.Command.Base
 {
     public  interface ICommandRepository<T> where T : class
     {

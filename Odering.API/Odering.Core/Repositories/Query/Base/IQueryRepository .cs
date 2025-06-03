@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Core.Repositories.Query.Base
+namespace Ordering.Core.Repositories.Query.Base
 {
     public interface IQueryRepository<T> where T : class
     {

@@ -15,6 +15,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Ordering.Core.Repositories.Query;
+using Ordering.Core.Repositories.Query.Base;
+using Ordering.Core.Repositories.Command.Base;
+using Ordering.Core.Repositories.Command;
 
 namespace Ordering.Infrastructure
 {

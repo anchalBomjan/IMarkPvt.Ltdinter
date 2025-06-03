@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using Odering.Application.Common.Interface;
+using Ordering.Application.Common.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Commands.Role.Delete
+namespace Ordering.Application.Commands.Role.Delete
 {
     public class DeleteRoleCommand : IRequest<int>
     {

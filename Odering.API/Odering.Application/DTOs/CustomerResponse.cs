@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.DTOs
+namespace Ordering.Application.DTOs
 {
     public class CustomerResponse
     {

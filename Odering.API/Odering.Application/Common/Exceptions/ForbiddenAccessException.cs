@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Common.Exceptions
+namespace Ordering.Application.Common.Exceptions
 {
     public class ForbiddenAccessException:Exception
     {

@@ -1,13 +1,13 @@
 ﻿using MediatR;
-using Odering.Core.Repositories.Command;
-using Odering.Core.Repositories.Query;
+using Ordering.Core.Repositories.Command;
+using Ordering.Core.Repositories.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Commands.Customers.Delete
+namespace Ordering.Application.Commands.Customers.Delete
 {
     // Customer create command with string response
     public class DeleteCustomerCommand : IRequest<String>

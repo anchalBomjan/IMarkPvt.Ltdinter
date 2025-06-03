@@ -1,13 +1,13 @@
 ﻿using MediatR;
-using Odering.Core.Entities;
-using Odering.Core.Repositories.Query;
+using Ordering.Core.Entities;
+using Ordering.Core.Repositories.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Queries.Customers
+namespace Ordering.Application.Queries.Customers
 {
     // Customer query with List<Customer> response
     public record GetAllCustomerQuery : IRequest<List<Customer>>

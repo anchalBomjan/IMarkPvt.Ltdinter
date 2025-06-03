@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Odering.Core.Entities;
+using Ordering.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

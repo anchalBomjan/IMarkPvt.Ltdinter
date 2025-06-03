@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "awUILYs30XJ9tA3cCTod/KxC5U7docar5fKc7UqYshkOb0guEcDbxpdZNWj660dpy5lTO1Y8/2sangLM/80SYA==",
+  "dgSpecHash": "CQU+G0TU7ye2XzfIfSwQhr0+ft+sZjGtjqfm0lw7ycJkTWDNe/c0w5dwCC8DvCQ+CLybV4n1LgBX4fzRTTL57g==",
   "success": true,
-  "projectFilePath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj",
+  "projectFilePath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

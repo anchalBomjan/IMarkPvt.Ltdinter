@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Odering.Application.Common.Exceptions;
-using Odering.Application.Common.Interface;
+using Ordering.Application.Common.Exceptions;
+using Ordering.Application.Common.Interface;
 using Ordering.Infrastructure.Identity;
 
 using System;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Common.Interface
+namespace Ordering.Application.Common.Interface
 {
     public interface IIdentityService
     {

@@ -4,12 +4,12 @@
     "D:\\IMarkPvt.Ltdinter\\Odering.API\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj": {
+    "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj",
-        "projectName": "Odering.Application",
-        "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj",
+        "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj",
+        "projectName": "Ordering.Application",
+        "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj",
         "packagesPath": "C:\\Users\\Anchal\\.nuget\\packages\\",
         "outputPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj": {
-                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj"
+              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj"
               }
             }
           }
@@ -102,12 +102,12 @@
         }
       }
     },
-    "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj": {
+    "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj",
-        "projectName": "Odering.Core",
-        "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj",
+        "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj",
+        "projectName": "Ordering.Core",
+        "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj",
         "packagesPath": "C:\\Users\\Anchal\\.nuget\\packages\\",
         "outputPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\obj\\",
         "projectStyle": "PackageReference",
@@ -186,11 +186,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj": {
-                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Odering.Application.csproj"
+              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Application\\Ordering.Application.csproj"
               },
-              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj": {
-                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Odering.Core.csproj"
+              "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\Odering.API\\Odering.Core\\Ordering.Core.csproj"
               }
             }
           }

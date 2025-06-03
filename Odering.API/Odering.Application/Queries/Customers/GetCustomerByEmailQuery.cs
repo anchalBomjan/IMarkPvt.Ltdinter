@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using Odering.Core.Entities;
+using Ordering.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Queries.Customers
+namespace Ordering.Application.Queries.Customers
 {
     // Customer GetCustomerByEmailQuery with Customer response
     public class GetCustomerByEmailQuery : IRequest<Customer>

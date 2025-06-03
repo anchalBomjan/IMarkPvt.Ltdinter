@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using Odering.Application.Common.Interface;
+using Ordering.Application.Common.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Commands.User.Create
+namespace Ordering.Application.Commands.User.Create
 {
     public class CreateUserCommand : IRequest<int>
     {

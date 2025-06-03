@@ -1,13 +1,13 @@
 ﻿using MediatR;
-using Odering.Application.Common.Interface;
-using Odering.Application.DTOs;
+using Ordering.Application.Common.Interface;
+using Ordering.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odering.Application.Queries.Role
+namespace Ordering.Application.Queries.Role
 {
     public class GetRoleQuery : IRequest<IList<RoleResponseDTO>>
     {
