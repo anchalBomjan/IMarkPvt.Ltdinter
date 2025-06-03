@@ -70,9 +70,14 @@ namespace Ordering.API
 
             //builder.Services.AddDbContext<OrderingContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
             // Register dependencies
-            builder.Services.AddMediatR(typeof(CreateCustomerCommandHandler).GetTypeInfo().Assembly);
-            builder.Services.AddMediatR(typeof(CreateUserCommandHandler).GetTypeInfo().Assembly);
 
+
+            // Fixed MediatR Registration (v12.5+ syntax)
+            builder.Services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(typeof(CreateCustomerCommandHandler).Assembly);
+                cfg.RegisterServicesFromAssembly(typeof(CreateUserCommandHandler).Assembly);
+            });
 
             builder.Services.AddCors(c =>
             {
