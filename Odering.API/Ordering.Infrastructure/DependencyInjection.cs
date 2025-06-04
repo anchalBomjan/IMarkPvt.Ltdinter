@@ -28,10 +28,10 @@ namespace Ordering.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services,
             IConfiguration configuration)
         {
-            services.AddDbContext<OrderingContext>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection"),
+            services.AddDbContext<OrderingContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsAssembly(typeof(OrderingContext).Assembly.FullName)
                 ));
-
+        
             services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<OrderingContext>()
             .AddDefaultTokenProviders();
