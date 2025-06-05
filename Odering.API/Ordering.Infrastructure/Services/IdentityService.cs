@@ -128,25 +128,8 @@ namespace Ordering.Infrastructure.Services
             return users.Select(user => (user.Id, user.FullName, user.UserName, user.Email)).ToList();
         }
 
-        public async Task<List<(string id, string userName, string email, IList<string> roles)>> GetAllUsersDetailsAsync()
-        {
-            // throw new NotImplementedException();
+      
 
-            //var roles = await _userManager.GetRolesAsync(user);
-            //return (user.Id, user.UserName, user.Email, roles);
-
-            var users= await _userManager.Users.ToArrayAsync();
-            var userDetails = new List<(string, string, string, IList<string>)>();
-
-            foreach(var user in users)
-            {
-                var roles= await _userManager.GetRolesAsync(user);
-                userDetails.Add((user.Id, user.UserName, user.Email, roles));
-
-
-            }
-            return userDetails;
-        }
 
         public async Task<List<(string id, string roleName)>> GetRolesAsync()
         {
@@ -158,17 +141,55 @@ namespace Ordering.Infrastructure.Services
 
             return roles.Select(role => (role.Id, role.Name)).ToList();
         }
-
-        public async Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsAsync(string userId)
+        public async Task<List<(string id, string userName, string email, IList<string> roles)>> GetAllUsersDetailsAsync()
         {
-            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
-            if (user == null)
+            // throw new NotImplementedException();
+
+            //var roles = await _userManager.GetRolesAsync(user);
+            //return (user.Id, user.UserName, user.Email, roles);
+
+            var users = await _userManager.Users.ToArrayAsync();
+            var userDetails = new List<(string, string, string, IList<string>)>();
+
+            foreach (var user in users)
             {
-                throw new NotFoundException("User not found");
+                var roles = await _userManager.GetRolesAsync(user);
+                userDetails.Add((user.Id, user.UserName, user.Email, roles));
+
+
             }
-            var roles = await _userManager.GetRolesAsync(user);
-            return (user.Id, user.FullName, user.UserName, user.Email, roles);
+            return userDetails;
         }
+
+        //public async Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsAsync(string userId)
+        //{
+        //    var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
+        //    if (user == null)
+        //    {
+        //        throw new NotFoundException("User not found");
+        //    }
+        //    var roles = await _userManager.GetRolesAsync(user);
+        //    return (user.Id, user.FullName, user.UserName, user.Email, roles);
+        //}
+
+        public async Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsAsync(string Id)
+        {
+            var user=await _userManager.FindByIdAsync(Id);
+            if (user == null) throw new Exception("User not Found");
+            var roles = await _userManager.GetRolesAsync(user);
+
+            return (
+                userId: user.Id,
+                fullName: user.FullName,
+                UserName:user.UserName,
+                Email:user.Email,
+                roles:roles
+
+
+                );
+        }
+
+
 
         public async Task<(string userId, string fullName, string UserName, string email, IList<string> roles)> GetUserDetailsByUserNameAsync(string userName)
         {
