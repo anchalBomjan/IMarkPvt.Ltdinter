@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Ordering.Application.Common.Exceptions;
 using Ordering.Application.Common.Interface;
+using Ordering.Application.DTOs;
 using Ordering.Infrastructure.Identity;
 
 using System;
@@ -240,6 +241,11 @@ namespace Ordering.Infrastructure.Services
         public async Task<bool> UpdateUserProfile(string id, string fullName, string email, IList<string> roles)
         {
             var user = await _userManager.FindByIdAsync(id);
+
+            if (user == null)
+            {
+                throw new NotFoundException(nameof(user),id);
+            }
             user.FullName = fullName;
             user.Email = email;
             var result = await _userManager.UpdateAsync(user);
