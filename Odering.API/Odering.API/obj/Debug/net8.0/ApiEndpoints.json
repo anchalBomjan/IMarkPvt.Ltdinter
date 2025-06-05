@@ -462,7 +462,7 @@
   {
     "ContainingType": "Ordering.API.Controllers.UserController",
     "Method": "GetUserDetails",
-    "RelativePath": "api/User/GetUserDeletes/{Userid}",
+    "RelativePath": "api/User/GetUserDetails/{Userid}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

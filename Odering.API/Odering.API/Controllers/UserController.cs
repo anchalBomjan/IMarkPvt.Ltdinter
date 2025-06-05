@@ -45,7 +45,8 @@ namespace Ordering.API.Controllers
 
         }
 
-        [HttpGet("GetUserDeletes/{Userid}")]
+
+        [HttpGet("GetUserDetails/{Userid}")]
         [ProducesDefaultResponseType(typeof(UserDetailsResponseDTO))]
 
         public async Task<IActionResult> GetUserDetails(string userId)
