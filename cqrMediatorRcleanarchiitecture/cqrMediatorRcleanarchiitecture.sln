@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrsMediatorWeb.Api", "cqrMediatorRcleanarchiitecture\cqrsMediatorWeb.Api.csproj", "{9ECAA3DA-5FD1-44A6-A0D0-15E98CE8AB8A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6446E3A3-57CC-4CDA-BCF0-0998F1B78168} = {6446E3A3-57CC-4CDA-BCF0-0998F1B78168}
+		{B26E7C63-998D-4D7A-BF32-CC9DCD4CE261} = {B26E7C63-998D-4D7A-BF32-CC9DCD4CE261}
 		{EBC9E9E0-DE84-44C2-A36B-0A6934FA818C} = {EBC9E9E0-DE84-44C2-A36B-0A6934FA818C}
 	EndProjectSection
 EndProject
@@ -13,6 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrsMediator.Domain", "cqrs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrsMediator.Application", "cqrsMediator.Application\cqrsMediator.Application.csproj", "{6446E3A3-57CC-4CDA-BCF0-0998F1B78168}"
 	ProjectSection(ProjectDependencies) = postProject
+		{B26E7C63-998D-4D7A-BF32-CC9DCD4CE261} = {B26E7C63-998D-4D7A-BF32-CC9DCD4CE261}
 		{EBC9E9E0-DE84-44C2-A36B-0A6934FA818C} = {EBC9E9E0-DE84-44C2-A36B-0A6934FA818C}
 	EndProjectSection
 EndProject

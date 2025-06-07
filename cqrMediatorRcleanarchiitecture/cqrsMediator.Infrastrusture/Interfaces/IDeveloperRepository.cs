@@ -9,7 +9,7 @@ namespace cqrsMediator.Infrastrusture.Interfaces
 {
     public interface IDeveloperRepository
     {
+
         Task<IEnumerable<Developer>> GetAllDeveloperByAddressIdAsync(int addressId, CancellationToken ct);
     }
-
 }

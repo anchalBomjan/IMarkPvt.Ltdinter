@@ -26,8 +26,8 @@ namespace cqrMediatorRcleanarchiitecture
 
             //1  Add services to the container.
             builder.Services.AddScoped<IDeveloperRepository, GetAllDeveloperByAddressIdRepository>();
-            
-         
+
+
             // 2: Add controllers
             builder.Services.AddControllers();
 
