@@ -30,6 +30,7 @@ namespace cqrsMediator.Application.Developers.Commands.UpdateDeveloper
             // 3. Update only mutable properties
             developer.Name = request.Name;
             developer.Email = request.Email;
+
             developer.YearsOfExperience = request.YearsOfExperience;
             developer.EstimateIncome = request.EstimateIncome;
             developer.AddressId = request.AddressId; // Direct assignment without validation

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using cqrsMediator.Application.DTOs;
-using cqrsMediator.Domain.Interfaces;
+using cqrsMediator.Infrastrusture.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
 using MediatR;
 using System;

@@ -1,9 +1,7 @@
 ﻿using cqrsMediator.Domain.Entities;
-using cqrsMediator.Domain.Interfaces;
+using cqrsMediator.Infrastrusture.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
 using Microsoft.EntityFrameworkCore;
-
-
 namespace cqrsMediator.Infrastrusture.Repositories
 {
     public class GetAllDeveloperByAddressIdRepository(ApplicationDbContext context) : IDeveloperRepository

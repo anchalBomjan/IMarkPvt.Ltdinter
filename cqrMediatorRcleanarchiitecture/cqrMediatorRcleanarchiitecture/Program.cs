@@ -5,7 +5,7 @@ using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Application.Common.Mappings;
 using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
 
-using cqrsMediator.Domain.Interfaces;
+using cqrsMediator.Infrastrusture.Interfaces;
 using cqrsMediator.Infrastrusture.Presistance;
 using cqrsMediator.Infrastrusture.Repositories;
 using FluentValidation;

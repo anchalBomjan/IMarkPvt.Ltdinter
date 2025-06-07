@@ -111,6 +111,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj"
+              },
               "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj": {
                 "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj"
               }
