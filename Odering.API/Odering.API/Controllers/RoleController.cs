@@ -14,8 +14,8 @@ namespace Ordering.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
- //   [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
- //   [Authorize(Roles = "Admin, Management")]
+  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(Roles = "Admin, Management")]
     public class RoleController : ControllerBase
     {
         private readonly IMediator _mediator;
