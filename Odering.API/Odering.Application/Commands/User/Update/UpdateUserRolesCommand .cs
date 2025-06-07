@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿ using MediatR;
 using Ordering.Application.Common.Interface;
 using System;
 using System.Collections.Generic;
