@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Ordering.Application.Commands.User.Create;
 using Ordering.Application.Commands.User.Delete;
 using Ordering.Application.Commands.User.Update;
+using Ordering.Application.Common.Exceptions;
 using Ordering.Application.DTOs;
 using Ordering.Application.Queries.User;
 
@@ -46,13 +47,32 @@ namespace Ordering.API.Controllers
         }
 
 
-        [HttpGet("GetUserDetails/{Userid}")]
-        [ProducesDefaultResponseType(typeof(UserDetailsResponseDTO))]
+        //[HttpGet("GetUserDetails/{Userid}")]
+        //[ProducesDefaultResponseType(typeof(UserDetailsResponseDTO))]
 
+        //public async Task<IActionResult> GetUserDetails(string userId)
+        //{
+        //    var result = await _mediator.Send(new GetUserDetailsQuery() { UserId = userId });
+        //    return Ok(result);
+        //}
+
+        [HttpGet("GetUserDetails/{userId}")]
+        [ProducesDefaultResponseType(typeof(UserDetailsResponseDTO))]
         public async Task<IActionResult> GetUserDetails(string userId)
         {
-            var result = await _mediator.Send(new GetUserDetailsQuery() { UserId = userId });
-            return Ok(result);
+            try
+            {
+                var result = await _mediator.Send(new GetUserDetailsQuery { UserId = userId });
+                return Ok(result);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(new
+                {
+                    error = "User not found",
+                    message = ex.Message
+                });
+            }
         }
 
         [HttpGet("GetUserDetailsByUserName/{userName}")]
