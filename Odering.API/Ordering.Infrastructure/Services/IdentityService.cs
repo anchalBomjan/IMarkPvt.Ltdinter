@@ -141,20 +141,18 @@ namespace Ordering.Infrastructure.Services
 
             return roles.Select(role => (role.Id, role.Name)).ToList();
         }
-        public async Task<List<(string id, string userName, string email, IList<string> roles)>> GetAllUsersDetailsAsync()
+        public async Task<List<(string id, string userName, string fullName, string email, IList<string> roles)>> GetAllUsersDetailsAsync()
         {
-            // throw new NotImplementedException();
-
-            //var roles = await _userManager.GetRolesAsync(user);
-            //return (user.Id, user.UserName, user.Email, roles);
-
+            
             var users = await _userManager.Users.ToArrayAsync();
-            var userDetails = new List<(string, string, string, IList<string>)>();
+          //  var userDetails = new List<(string, string, string, IList<string>)>();
+
+            var userDetails = new List<(string id, string userName, string fullName, string email, IList<string> roles)>();
 
             foreach (var user in users)
             {
                 var roles = await _userManager.GetRolesAsync(user);
-                userDetails.Add((user.Id, user.UserName, user.Email, roles));
+                userDetails.Add((user.Id, user.UserName, user.FullName, user.Email, roles));
 
 
             }

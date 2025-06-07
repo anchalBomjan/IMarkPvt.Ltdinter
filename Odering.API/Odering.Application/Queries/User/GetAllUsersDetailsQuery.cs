@@ -32,7 +32,8 @@ namespace Ordering.Application.Queries.User
             {
                 Id = x.id,
                 Email = x.email,
-                UserName = x.userName
+                UserName = x.userName,
+                FullName=x.fullName
                 //Roles = (IList<string>)_identityService.GetUserRolesAsync(x.id) // Converstion problem
             }).ToList();
 
