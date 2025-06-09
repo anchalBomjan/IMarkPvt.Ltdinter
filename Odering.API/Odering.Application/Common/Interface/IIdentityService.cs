@@ -38,6 +38,7 @@ namespace Ordering.Application.Common.Interface
         Task<bool> UpdateUsersRole(string userName, IList<string> usersRole);
 
 
-
+        Task<string> GeneratePasswordResetTokenAsync(string email);
+        Task<bool> ResetPasswordAsync(string email, string token, string newPassword);
     }
 }

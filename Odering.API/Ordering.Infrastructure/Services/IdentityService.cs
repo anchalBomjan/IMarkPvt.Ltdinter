@@ -131,6 +131,8 @@ namespace Ordering.Infrastructure.Services
       
 
 
+
+
         public async Task<List<(string id, string roleName)>> GetRolesAsync()
         {
             var roles = await _roleManager.Roles.Select(x => new
@@ -141,6 +143,7 @@ namespace Ordering.Infrastructure.Services
 
             return roles.Select(role => (role.Id, role.Name)).ToList();
         }
+
         public async Task<List<(string id, string userName, string fullName, string email, IList<string> roles)>> GetAllUsersDetailsAsync()
         {
             
@@ -285,7 +288,49 @@ namespace Ordering.Infrastructure.Services
 
             return result.Succeeded;
         }
+        //-------------------------------------------------
+
+
+        public async Task<string> GeneratePasswordResetTokenAsync(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+                throw new NotFoundException($"User with email {email} not found.");
+
+            return await _userManager.GeneratePasswordResetTokenAsync(user);
+        }
+
+       
+            public async Task<bool> ResetPasswordAsync(string email, string token, string newPassword)
+            {
+                // 1. Look up the user (throw if not found – same as before).
+                var user = await _userManager.FindByEmailAsync(email)
+                    ?? throw new NotFoundException($"User with email '{email}' not found.");
+
+                // 2. Attempt the reset.
+                var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
+
+                // 3. If ASP-NET Identity says it failed, wrap its errors in your ValidationException.
+                if (!result.Succeeded)
+                    throw new ValidationException(result.Errors);      // ← uses your new ctor
+
+                // 4. Success – tell the caller.
+                return true;
+            }
+
+        
+
+
+
+
+
+
+
+
     }
+
+
+
 
 
 }
