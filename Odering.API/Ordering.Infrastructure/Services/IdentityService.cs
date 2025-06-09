@@ -288,7 +288,7 @@ namespace Ordering.Infrastructure.Services
 
             return result.Succeeded;
         }
-        //-------------------------------------------------
+        //-------------------------------------------------for forget passwords and recovery 
 
 
         public async Task<string> GeneratePasswordResetTokenAsync(string email)
