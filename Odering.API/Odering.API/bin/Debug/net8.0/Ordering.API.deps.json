@@ -1350,6 +1350,7 @@
       "Ordering.Infrastructure/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.66",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0",
           "Microsoft.Data.Sqlite.Core": "8.0.0",

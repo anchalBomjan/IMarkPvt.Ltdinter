@@ -41,7 +41,7 @@ namespace Ordering.Application.Commands.Auth
             string token = _tokenGenerator.GenerateJWTToken((userId: userId, userName: userName, roles: roles));
 
             return new AuthResponseDTO()
-            {
+            { 
                 UserId = userId,
                 Name = userName,
                 Token = token
