@@ -69,9 +69,10 @@
 //    }
 //}
 
-///////////////***********************Second Approached for Implementation of Dependency Inversion Principle ***************************
-///
+////********Second Approached for Implementation of Dependency Inversion Principle  (Consolidation of Infrastructure and jwt Configuration) **
 
+/////This process is called Cross-Cutting Concern Abstraction or Infrastructure Centralization. More specifically,
+///it's an implementation of the Dependency Inversion Principle applied to infrastructure configuration.
 
 
 
