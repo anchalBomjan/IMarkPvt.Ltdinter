@@ -1,4 +1,4 @@
-﻿using Azure.Core;
+﻿
 using FluentValidation;
 using MediatR;
 using System;

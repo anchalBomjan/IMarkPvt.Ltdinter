@@ -1,6 +1,6 @@
 ﻿using cqrsMediator.Domain.Entities;
-using cqrsMediator.Infrastrusture.Presistance;
 using MediatR;
+using cqrsMediator.Application.Common.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Addresses.Commands.CreateAddress
 {
-    public sealed class CreateAddressCommandHandler(ApplicationDbContext context)
+    public sealed class CreateAddressCommandHandler(IApplicationDbContext context)
         :IRequestHandler<CreateAddressCommand,int>
     {
         public async Task<int> Handle(CreateAddressCommand request, CancellationToken ct)

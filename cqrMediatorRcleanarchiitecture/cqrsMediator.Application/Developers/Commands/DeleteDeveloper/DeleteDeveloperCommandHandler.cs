@@ -1,9 +1,10 @@
-﻿using cqrsMediator.Infrastrusture.Presistance;
-using MediatR;
+﻿using MediatR;
+using cqrsMediator.Application.Common.Interfaces;
+
 namespace cqrsMediator.Application.Developers.Commands.DeleteDeveloper
 {
 
-    public sealed class DeleteDeveloperCommandHandler(ApplicationDbContext context) 
+    public sealed class DeleteDeveloperCommandHandler(IApplicationDbContext context) 
         : IRequestHandler<DeleteDeveloperCommand>
     {
         public async Task Handle(DeleteDeveloperCommand request, CancellationToken ct)

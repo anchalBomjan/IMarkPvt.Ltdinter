@@ -4,6 +4,92 @@
     "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj": {}
   },
   "projects": {
+    "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj",
+        "projectName": "cqrsMediator.Application",
+        "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj",
+        "packagesPath": "C:\\Users\\Anchal\\.nuget\\packages\\",
+        "outputPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anchal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -88,6 +174,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj"
+              },
               "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
                 "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj"
               }

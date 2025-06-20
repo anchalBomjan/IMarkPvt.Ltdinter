@@ -1,10 +1,10 @@
 ﻿using cqrsMediator.Domain.Entities;
-using cqrsMediator.Infrastrusture.Interfaces;
-using cqrsMediator.Infrastrusture.Presistance;
 using Microsoft.EntityFrameworkCore;
+using cqrsMediator.Application.Common.Interfaces;
+
 namespace cqrsMediator.Infrastrusture.Repositories
 {
-    public class GetAllDeveloperByAddressIdRepository(ApplicationDbContext context) : IDeveloperRepository
+    public class GetAllDeveloperByAddressIdRepository(IApplicationDbContext context) : IDeveloperRepository
     {
         public async Task<IEnumerable<Developer>> GetAllDeveloperByAddressIdAsync(int addressId, CancellationToken ct)
         {

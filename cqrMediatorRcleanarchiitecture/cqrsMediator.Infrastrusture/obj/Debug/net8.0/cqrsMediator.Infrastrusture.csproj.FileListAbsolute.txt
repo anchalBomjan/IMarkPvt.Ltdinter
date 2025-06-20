@@ -1,8 +1,11 @@
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Infrastrusture.deps.json
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Infrastrusture.runtimeconfig.json
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Infrastrusture.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Infrastrusture.pdb
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Application.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Domain.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Domain.pdb
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Application.pdb
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.csproj.AssemblyReference.cache
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.GeneratedMSBuildEditorConfig.editorconfig
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.AssemblyInfoInputs.cache
@@ -13,6 +16,5 @@ D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\refint\cqrsMediator.Infrastrusture.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.pdb
-D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\ref\cqrsMediator.Infrastrusture.dll
-D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\bin\Debug\net8.0\cqrsMediator.Infrastrusture.runtimeconfig.json
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\cqrsMediator.Infrastrusture.genruntimeconfig.cache
+D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Infrastrusture\obj\Debug\net8.0\ref\cqrsMediator.Infrastrusture.dll

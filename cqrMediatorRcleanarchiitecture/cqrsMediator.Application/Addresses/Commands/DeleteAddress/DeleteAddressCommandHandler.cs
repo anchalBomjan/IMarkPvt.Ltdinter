@@ -1,4 +1,6 @@
-﻿using cqrsMediator.Infrastrusture.Presistance;
+﻿
+using cqrsMediator.Application.Common.Interfaces;
+
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Addresses.Commands.DeleteAddress
 {
-    public sealed class DeleteAddressCommandHandler(ApplicationDbContext context)
+    public sealed class DeleteAddressCommandHandler(IApplicationDbContext context)
         :IRequestHandler<DeleteAddressCommand>
 
     {

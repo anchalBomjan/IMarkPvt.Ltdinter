@@ -1,6 +1,7 @@
 ﻿using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Domain.Entities;
-using cqrsMediator.Infrastrusture.Presistance;
+using cqrsMediator.Application.Common.Interfaces;
+
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Addresses.Commands.UpdateAddress
 {
-    public sealed  class UpdateAddressCommandHandler(ApplicationDbContext context)
+    public sealed  class UpdateAddressCommandHandler(IApplicationDbContext context)
         :IRequestHandler<UpdateAddressCommand>
     {
         public async Task Handle(UpdateAddressCommand request,CancellationToken ct)

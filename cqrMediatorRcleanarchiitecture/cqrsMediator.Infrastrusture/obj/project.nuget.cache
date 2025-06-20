@@ -1,12 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "9Y07yavxaxsRcgb/cx1GW/xT8my4AESueje/BoieFVEpDRGBEoHyI8CnkgMW9NBJYBCJ0LZxExdRiv5LcYVitw==",
+  "dgSpecHash": "MSrAg5u4grS4DR8K27JY5prdyfSsTpYHe40ZFgXV0rlKEaqozja/b8g/dz0B1d/y4u8gALocHX2+aSaqy0YpLQ==",
   "success": true,
   "projectFilePath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anchal\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Anchal\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\Anchal\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0\\fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Anchal\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\Anchal\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Anchal\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

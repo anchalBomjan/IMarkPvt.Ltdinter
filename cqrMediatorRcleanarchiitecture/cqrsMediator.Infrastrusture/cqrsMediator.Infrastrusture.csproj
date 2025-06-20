@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\cqrsMediator.Domain\cqrsMediator.Domain.csproj" />
+	  <ProjectReference Include="..\cqrsMediator.Application\cqrsMediator.Application.csproj" />
   </ItemGroup>
 
 </Project>

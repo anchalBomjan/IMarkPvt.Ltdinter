@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using cqrsMediator.Application.DTOs;
-using cqrsMediator.Infrastrusture.Interfaces;
-using cqrsMediator.Infrastrusture.Presistance;
+using cqrsMediator.Application.Common.Interfaces;
+
 using MediatR;
 using System;
 using System.Collections.Generic;

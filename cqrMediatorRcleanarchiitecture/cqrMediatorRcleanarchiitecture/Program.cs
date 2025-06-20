@@ -1,20 +1,16 @@
 
 using cqrsMediator.Application.Addresses.Commands.CreateAddress;
 using cqrsMediator.Application.Common.Behaviors;
-using cqrsMediator.Application.Common.Exceptions;
+using cqrsMediator.Application.Common.Interfaces;
 using cqrsMediator.Application.Common.Mappings;
 using cqrsMediator.Application.Developers.Commands.CreateDeveloper;
-
-using cqrsMediator.Infrastrusture.Interfaces;
-using cqrsMediator.Infrastrusture.Presistance;
 using cqrsMediator.Infrastrusture.Repositories;
+using cqrsMediator.Infrastrusture.Presistance;
+
 using FluentValidation;
 using MediatR;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using System.Net;
 
 namespace cqrMediatorRcleanarchiitecture
 {
@@ -56,7 +52,7 @@ namespace cqrMediatorRcleanarchiitecture
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
             //7 injecting ApplicationDbContext
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            builder.Services.AddDbContext<IApplicationDbContext,ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 

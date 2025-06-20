@@ -12,7 +12,5 @@ D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\obj
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\obj\Debug\net8.0\ref\cqrsMediator.Application.dll
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\obj\Debug\net8.0\cqrsMediator.Application.csproj.AssemblyReference.cache
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\bin\Debug\net8.0\cqrsMediator.Domain.dll
-D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\bin\Debug\net8.0\cqrsMediator.Infrastrusture.dll
-D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\bin\Debug\net8.0\cqrsMediator.Infrastrusture.pdb
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\bin\Debug\net8.0\cqrsMediator.Domain.pdb
 D:\IMarkPvt.Ltdinter\cqrMediatorRcleanarchiitecture\cqrsMediator.Application\obj\Debug\net8.0\cqrsMedi.473D53D1.Up2Date

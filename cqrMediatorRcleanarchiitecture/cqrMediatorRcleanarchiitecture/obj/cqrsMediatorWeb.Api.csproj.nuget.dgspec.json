@@ -30,6 +30,12 @@
             "projectReferences": {
               "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj": {
                 "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj"
+              },
+              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj"
+              },
+              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj"
               }
             }
           }
@@ -113,9 +119,6 @@
             "projectReferences": {
               "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
                 "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj"
-              },
-              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj": {
-                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Infrastrusture\\cqrsMediator.Infrastrusture.csproj"
               }
             }
           }
@@ -150,6 +153,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -256,6 +263,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj": {
+                "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Application\\cqrsMediator.Application.csproj"
+              },
               "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj": {
                 "projectPath": "D:\\IMarkPvt.Ltdinter\\cqrMediatorRcleanarchiitecture\\cqrsMediator.Domain\\cqrsMediator.Domain.csproj"
               }

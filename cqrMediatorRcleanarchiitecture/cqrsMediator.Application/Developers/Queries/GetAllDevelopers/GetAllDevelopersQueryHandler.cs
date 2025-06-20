@@ -4,9 +4,9 @@ using AutoMapper.QueryableExtensions;
 using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Application.Common.Mappings;
 using cqrsMediator.Application.DTOs;
-
-using cqrsMediator.Infrastrusture.Presistance;
 using MediatR;
+using cqrsMediator.Application.Common.Interfaces;
+
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Application.Developers.Queries.GetAllDevelopers
 {
-    public sealed class GetAllDevelopersQueryHandler(ApplicationDbContext _context,IMapper _mapper) :
+    public sealed class GetAllDevelopersQueryHandler(IApplicationDbContext _context,IMapper _mapper) :
         IRequestHandler<GetAllDevelopersQuery, List<DeveloperDTO>>
     {
         

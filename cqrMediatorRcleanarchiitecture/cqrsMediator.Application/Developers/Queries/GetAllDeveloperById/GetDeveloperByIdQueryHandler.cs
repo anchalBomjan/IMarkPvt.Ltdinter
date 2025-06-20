@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using cqrsMediator.Application.DTOs;
-using cqrsMediator.Infrastrusture.Presistance;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using cqrsMediator.Application.Common.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 namespace cqrsMediator.Application.Developers.Queries.GetAllDeveloperById
 {
     public class GetDeveloperByIdQueryHandler(
-     ApplicationDbContext context,
+     IApplicationDbContext context,
      IMapper mapper)
      : IRequestHandler<GetDeveloperByIdQuery, DeveloperDTO?>
     {

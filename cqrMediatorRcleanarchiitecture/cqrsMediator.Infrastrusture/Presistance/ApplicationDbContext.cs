@@ -1,5 +1,7 @@
 ﻿using cqrsMediator.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using cqrsMediator.Application.Common.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace cqrsMediator.Infrastrusture.Presistance
 {
-    public  class ApplicationDbContext:DbContext
+    public  class ApplicationDbContext:DbContext,IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -54,6 +56,12 @@ namespace cqrsMediator.Infrastrusture.Presistance
 
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Developer> Developers { get; set; }
+
+        public override async Task<int> SaveChangesAsync(
+          CancellationToken cancellationToken = new CancellationToken())
+        {
+            return await base.SaveChangesAsync(cancellationToken);
+        }
 
     }
 }

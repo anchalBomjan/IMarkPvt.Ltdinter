@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using cqrsMediator.Application.DTOs;
-using cqrsMediator.Infrastrusture.Presistance;
+using cqrsMediator.Application.Common.Interfaces;
+
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,7 +15,7 @@ namespace cqrsMediator.Application.Addresses.Queries.GetAllAddress
 {
 
         public sealed class GetAllAddressesQueryHandler(
-            ApplicationDbContext context,
+            IApplicationDbContext context,
             IMapper mapper)
             : IRequestHandler<GetAllAddressesQuery, List<AddressDTO>>
         {

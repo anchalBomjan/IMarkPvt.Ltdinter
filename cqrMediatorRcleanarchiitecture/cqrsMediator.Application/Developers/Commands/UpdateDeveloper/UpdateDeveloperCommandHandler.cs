@@ -1,12 +1,13 @@
 ﻿using cqrsMediator.Application.Common.Exceptions;
 using cqrsMediator.Domain.Entities;
-using cqrsMediator.Infrastrusture.Presistance;
+using cqrsMediator.Application.Common.Interfaces;
+
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace cqrsMediator.Application.Developers.Commands.UpdateDeveloper
 {
-    public sealed class UpdateDeveloperCommandHandler(ApplicationDbContext context) : IRequestHandler<UpdateDeveloperCommand>
+    public sealed class UpdateDeveloperCommandHandler(IApplicationDbContext context) : IRequestHandler<UpdateDeveloperCommand>
     {
 
         public async Task Handle(UpdateDeveloperCommand request, CancellationToken ct)
