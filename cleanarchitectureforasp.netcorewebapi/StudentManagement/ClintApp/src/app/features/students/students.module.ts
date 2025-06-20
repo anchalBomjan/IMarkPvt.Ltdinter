@@ -5,7 +5,9 @@ import { StudentFormComponent } from './components/student-form/student-form.com
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 import { StudentsRoutingModule } from './students-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ConfirmationService } from 'primeng/api/confirmationservice';
+// CORRECT
+import { ConfirmationService } from 'primeng/api';
+
 import { MessageService } from 'primeng/api';
 
 

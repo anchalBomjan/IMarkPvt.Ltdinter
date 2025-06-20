@@ -19,15 +19,16 @@ export class StudentService {
     return this.http.get<StudentDTO>(`${this.API_URL}/${id}`);
   }
 
-  createStudent(student: StudentDTO): Observable<StudentDTO> {
-    return this.http.post<StudentDTO>(this.API_URL, student);
-  }
-
   updateStudent(id: number, student: StudentDTO): Observable<void> {
     return this.http.put<void>(`${this.API_URL}/${id}`, student);
   }
+  
+  createStudent(student: StudentDTO): Observable<void> {
+    return this.http.post<void>(this.API_URL, student);
+  }
+  
 
-  deleteStudent(id: number): Observable<void> {
+  deleteStudent(id: number): Observable<any> {
     return this.http.delete<void>(`${this.API_URL}/${id}`);
   }
   

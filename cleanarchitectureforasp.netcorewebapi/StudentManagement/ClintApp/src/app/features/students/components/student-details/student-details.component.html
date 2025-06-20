@@ -1,1 +1,29 @@
-<p>student-details works!</p>
+<div class="container mt-4" *ngIf="student; else loader">
+    <p-card header="Student Details">
+      <div class="grid">
+        <div class="col-4 font-bold">ID:</div>
+        <div class="col-8">{{student.id}}</div>
+        
+        <div class="col-4 font-bold">First Name:</div>
+        <div class="col-8">{{student.firstName}}</div>
+        
+        <div class="col-4 font-bold">Last Name:</div>
+        <div class="col-8">{{student.lastName}}</div>
+        
+        <div class="col-4 font-bold">Email:</div>
+        <div class="col-8">{{student.email}}</div>
+        
+        <div class="col-4 font-bold">Enrollment Date:</div>
+        <div class="col-8">{{student.enrollmentDate | date}}</div>
+      </div>
+      
+      <div class="mt-4">
+        <button pButton label="Back to List" icon="pi pi-arrow-left" (click)="goBack()"></button>
+
+      </div>
+    </p-card>
+  </div>
+  
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>

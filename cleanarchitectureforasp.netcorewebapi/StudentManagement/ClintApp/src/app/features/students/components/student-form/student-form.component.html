@@ -1,1 +1,81 @@
-<p>student-form works!</p>
+<div class="container mt-4">
+    <p-toast></p-toast>
+  
+    <h2>{{ isEdit ? 'Edit Student' : 'Create Student' }}</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="p-fluid grid">
+        <div class="field col-12 md:col-6">
+          <label for="firstName">First Name</label>
+          <input
+            pInputText
+            id="firstName"
+            formControlName="firstName"
+            [ngClass]="{
+              'ng-invalid ng-dirty': form.get('firstName')?.invalid && form.get('firstName')?.touched
+            }"
+          />
+          <small
+            *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched"
+            class="p-error"
+          >First name is required</small>
+        </div>
+  
+        <div class="field col-12 md:col-6">
+          <label for="lastName">Last Name</label>
+          <input pInputText id="lastName" formControlName="lastName" />
+          <small
+            *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched"
+            class="p-error"
+          >Last name is required</small>
+        </div>
+  
+        <div class="field col-12">
+          <label for="email">Email</label>
+          <input pInputText id="email" formControlName="email" />
+          <small
+            *ngIf="form.get('email')?.errors?.['required'] && form.get('email')?.touched"
+            class="p-error"
+          >Email is required</small>
+          <small
+            *ngIf="form.get('email')?.errors?.['email'] && form.get('email')?.touched"
+            class="p-error"
+          >Invalid email format</small>
+        </div>
+  
+        <div class="field col-12 md:col-6">
+          <label for="enrollmentDate">Enrollment Date</label>
+          <p-calendar
+            inputId="enrollmentDate"
+            formControlName="enrollmentDate"
+            [showIcon]="true"
+            dateFormat="yy-mm-dd"
+          ></p-calendar>
+          <small
+            *ngIf="form.get('enrollmentDate')?.invalid && form.get('enrollmentDate')?.touched"
+            class="p-error"
+          >Enrollment date is required</small>
+        </div>
+      </div>
+  
+      <div class="mt-4">
+        <button
+          pButton
+          type="submit"
+          label="Save"
+          class="mr-2"
+          [disabled]="form.invalid || loading"
+        ></button>
+        <button
+          pButton
+          type="button"
+          label="Cancel"
+          severity="secondary"
+          (click)="cancel()"
+        ></button>
+      </div>
+    </form>
+  
+    <app-loader *ngIf="loading"></app-loader>
+  </div>
+  

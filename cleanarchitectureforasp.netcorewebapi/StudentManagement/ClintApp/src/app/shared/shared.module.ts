@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from './components/loader.component';
 import { PrimeNgModule } from './prime-ng.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,12 +10,7 @@ import { PrimeNgModule } from './prime-ng.module';
   declarations: [
     LoaderComponent
   ],
-  imports: [
-    CommonModule,
-    PrimeNgModule
-  ],
-  exports: [
-    LoaderComponent
-  ]
+  imports: [CommonModule, ReactiveFormsModule, PrimeNgModule,],
+  exports: [LoaderComponent, ReactiveFormsModule, PrimeNgModule]
 })
 export class SharedModule { }

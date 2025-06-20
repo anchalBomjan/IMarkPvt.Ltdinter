@@ -7,6 +7,8 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
+import { CardModule } from 'primeng/card';
+
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { CalendarModule } from 'primeng/calendar';
     ConfirmDialogModule,
     DialogModule,
     InputTextModule,
-    CalendarModule
+    CalendarModule,
+    CardModule
+  
   ]
 })
 
