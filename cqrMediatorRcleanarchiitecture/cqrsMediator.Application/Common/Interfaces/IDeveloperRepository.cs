@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cqrsMediator.Infrastrusture.Interfaces
+namespace cqrsMediator.Application.Common.Interfaces
 {
     public interface IDeveloperRepository
     {
 
         Task<IEnumerable<Developer>> GetAllDeveloperByAddressIdAsync(int addressId, CancellationToken ct);
     }
+
 }
