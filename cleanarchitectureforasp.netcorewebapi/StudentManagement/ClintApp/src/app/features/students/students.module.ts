@@ -4,6 +4,10 @@ import { StudentListComponent } from './components/student-list/student-list.com
 import { StudentFormComponent } from './components/student-form/student-form.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 import { StudentsRoutingModule } from './students-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ConfirmationService } from 'primeng/api/confirmationservice';
+import { MessageService } from 'primeng/api';
+
 
 
 
@@ -15,7 +19,9 @@ import { StudentsRoutingModule } from './students-routing.module';
   ],
   imports: [
     CommonModule,
-    StudentsRoutingModule
-  ]
+    StudentsRoutingModule,
+    SharedModule
+  ],
+  providers: [ConfirmationService, MessageService]
 })
 export class StudentsModule { }
