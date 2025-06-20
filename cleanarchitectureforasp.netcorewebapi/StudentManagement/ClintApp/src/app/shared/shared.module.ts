@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from './components/loader.component';
+import { PrimeNgModule } from './prime-ng.module';
 
 
 
@@ -9,7 +10,8 @@ import { LoaderComponent } from './components/loader.component';
     LoaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNgModule
   ],
   exports: [
     LoaderComponent
