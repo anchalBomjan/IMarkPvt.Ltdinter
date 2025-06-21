@@ -22,6 +22,16 @@ import { FormsModule } from '@angular/forms';
     DropdownModule,
     FormsModule,
 
+  ],
+  exports: [
+    TableModule,
+    ButtonModule,
+    InputTextModule,
+    DialogModule,
+    ToastModule,
+    ConfirmDialogModule,
+    DropdownModule,
+    FormsModule    
   ]
 })
 export class PrimengModule { }
