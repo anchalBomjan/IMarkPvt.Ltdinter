@@ -12,9 +12,9 @@ import { environment } from 'src/environment/environment';
 @Injectable()
 export class ApiPrefixInterceptor implements HttpInterceptor {
   intercept(
-    request: HttpRequest<unknown>,
+    request: HttpRequest<any>,
     next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  ): Observable<HttpEvent<any>> {
     const apiReq = request.clone({
       url: environment.apiBaseUrl + request.url
     });

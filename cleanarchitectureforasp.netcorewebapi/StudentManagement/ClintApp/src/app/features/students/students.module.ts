@@ -9,6 +9,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ConfirmationService } from 'primeng/api';
 
 import { MessageService } from 'primeng/api';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -22,7 +23,7 @@ import { MessageService } from 'primeng/api';
   imports: [
     CommonModule,
     StudentsRoutingModule,
-    SharedModule
+    SharedModule,HttpClientModule
   ],
   providers: [ConfirmationService, MessageService]
 })
