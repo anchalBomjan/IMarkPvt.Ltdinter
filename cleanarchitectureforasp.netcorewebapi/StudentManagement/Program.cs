@@ -29,7 +29,15 @@ namespace StudentManagement
             builder.Services.AddScoped<IStudentRepository,StudentRepositoroy>();
             builder.Services.AddScoped<StudentService>();
 
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularDev", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200")  // Angular dev server
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -40,7 +48,7 @@ namespace StudentManagement
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowAngularDev");
             app.UseAuthorization();
 
 

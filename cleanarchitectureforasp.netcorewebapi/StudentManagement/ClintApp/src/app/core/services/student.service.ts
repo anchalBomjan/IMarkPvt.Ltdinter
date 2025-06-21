@@ -1,35 +1,33 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { StudentDTO } from '../models/student';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { StudentDTO } from '../models/student';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
-  private readonly API_URL = '/api/students';
+  private apiUrl = 'https://localhost:44330/api/Student';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllStudents(): Observable<StudentDTO[]> {
-    return this.http.get<StudentDTO[]>(this.API_URL);
+    return this.http.get<StudentDTO[]>(this.apiUrl);
   }
 
   getStudentById(id: number): Observable<StudentDTO> {
-    return this.http.get<StudentDTO>(`${this.API_URL}/${id}`);
+    return this.http.get<StudentDTO>(`${this.apiUrl}/${id}`);
   }
 
-  updateStudent(id: number, student: StudentDTO): Observable<void> {
-    return this.http.put<void>(`${this.API_URL}/${id}`, student);
+  createStudent(student: StudentDTO): Observable<StudentDTO> {
+    return this.http.post<StudentDTO>(this.apiUrl, student);
   }
-  
-  createStudent(student: StudentDTO): Observable<void> {
-    return this.http.post<void>(this.API_URL, student);
-  }
-  
 
-  deleteStudent(id: number): Observable<any> {
-    return this.http.delete<void>(`${this.API_URL}/${id}`);
+  updateStudent(id: number, student: StudentDTO): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, student);
   }
-  
+
+  deleteStudent(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
 }
