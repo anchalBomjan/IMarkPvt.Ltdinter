@@ -1,1 +1,13 @@
-<p>student-create works!</p>
+<div class="card p-4">
+    <h4>Create Student</h4>
+    <div class="form-group">
+      <label>Name</label>
+      <input pInputText [(ngModel)]="student.name" />
+    </div>
+    <div class="form-group mt-2">
+      <label>Email</label>
+      <input pInputText [(ngModel)]="student.email" />
+    </div>
+    <button pButton label="Save" (click)="save()" class="mt-3"></button>
+  </div>
+  

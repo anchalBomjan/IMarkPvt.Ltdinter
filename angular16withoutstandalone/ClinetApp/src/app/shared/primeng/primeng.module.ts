@@ -13,25 +13,27 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [],
   imports: [
+    FormsModule,
     TableModule,
     ButtonModule,
     InputTextModule,
     DialogModule,
     ToastModule,
     ConfirmDialogModule,
-    DropdownModule,
-    FormsModule,
+    DropdownModule
+  
 
   ],
   exports: [
+    FormsModule,
     TableModule,
     ButtonModule,
     InputTextModule,
     DialogModule,
     ToastModule,
     ConfirmDialogModule,
-    DropdownModule,
-    FormsModule    
+    DropdownModule
+    
   ]
 })
 export class PrimengModule { }
