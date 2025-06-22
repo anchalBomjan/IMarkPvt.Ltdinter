@@ -24,9 +24,22 @@ export class StudentEditComponent {
     });
   }
 
+ // update(): void {
+  //  this.studentService.update(this.student.id, this.student).subscribe(() => {
+  //    this.router.navigate(['/students']);
+  //  });
   update(): void {
-    this.studentService.update(this.student.id, this.student).subscribe(() => {
-      this.router.navigate(['/students']);
+    console.log('Update method called for:', this.student);
+    this.studentService.update(this.student.id, this.student).subscribe({
+      next: () => {
+        console.log('Update successful, navigating now...');
+        this.router.navigate(['/students']);
+      },
+      error: (err) => {
+        console.error('Update failed:', err);
+      }
     });
   }
-}
+  
+  }
+

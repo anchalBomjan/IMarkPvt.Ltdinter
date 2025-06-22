@@ -35,14 +35,23 @@ export class StudentService {
     return of();
   }
 
-  update(id: number, updatedStudent: Student): Observable<void> {
-    const index = this.students.findIndex(s => s.id === id);
-    if (index !== -1) {
-      this.students[index] = { ...updatedStudent, id };
+  // update(id: number, updatedStudent: Student): Observable<void> {
+  //   const index = this.students.findIndex(s => s.id === id);
+  //   if (index !== -1) {
+  //     this.students[index] = { ...updatedStudent, id };
+  //     this.studentsSubject.next(this.students);
+  //   }
+  //   return of();
+  // }
+  update(id:number,updatedStudent:Student):Observable<void>{
+    const index= this.students.findIndex(s=>s.id==id);
+    if(index!=-1){
+      this.students[index]={...updatedStudent,id};
       this.studentsSubject.next(this.students);
     }
-    return of();
+    return of(void 0);
   }
+
 
   delete(id: number): Observable<void> {
     this.students = this.students.filter(s => s.id !== id);
