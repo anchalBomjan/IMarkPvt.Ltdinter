@@ -14,8 +14,10 @@ export class StudentService {
     {id:5,name:'Hari Narayan Yadav',email:'yadav@gmail.com'}
   ];
 
-  private studentsSubject = new BehaviorSubject<Student[]>(this.students);
-  students$ = this.studentsSubject.asObservable();
+
+  // it hold the current value and emits that  currents value immediately to new subscribers
+  // private studentsSubject = new BehaviorSubject<Student[]>(this.students);
+  // students$ = this.studentsSubject.asObservable();
 
 
   constructor() { }
@@ -34,7 +36,7 @@ export class StudentService {
   create(student: Student): Observable<void> {
     student.id = this.generateId();
     this.students.push(student);
-    this.studentsSubject.next(this.students);
+    //this.studentsSubject.next(this.students);
     return of(void 0);
   }
 
@@ -50,7 +52,7 @@ export class StudentService {
     const index= this.students.findIndex(s=>s.id==id);
     if(index!=-1){
       this.students[index]={...updatedStudent,id};
-      this.studentsSubject.next(this.students);
+     // this.studentsSubject.next(this.students);
     }
     return of(void 0);
   }
@@ -58,7 +60,7 @@ export class StudentService {
 
   delete(id: number): Observable<void> {
     this.students = this.students.filter(s => s.id !== id);
-    this.studentsSubject.next(this.students);
+    //this.studentsSubject.next(this.students);
     return of();
   }
 
