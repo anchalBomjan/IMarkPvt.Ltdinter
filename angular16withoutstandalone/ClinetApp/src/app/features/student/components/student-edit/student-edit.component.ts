@@ -20,7 +20,12 @@ export class StudentEditComponent {
   ) {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.studentService.getById(id).subscribe(stu => {
-      if (stu) this.student = { ...stu };
+      //if (stu) this.student = { ...stu };
+      if(stu){
+        this.student.id=stu.id;
+        this.student.email=stu.email;
+        this.student.name=stu.name;
+      }
     });
   }
 

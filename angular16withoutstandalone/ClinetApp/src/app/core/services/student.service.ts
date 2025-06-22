@@ -16,6 +16,8 @@ export class StudentService {
 
 
   // it hold the current value and emits that  currents value immediately to new subscribers
+  //mostly  used in auto UI sync without manual reload i.e data shared across multiple views
+
   // private studentsSubject = new BehaviorSubject<Student[]>(this.students);
   // students$ = this.studentsSubject.asObservable();
 
@@ -23,45 +25,48 @@ export class StudentService {
   constructor() { }
 
 
-
+// observable  is a  powerful tools for managing asynchronous data streams.Handles operation forn http request
   getAll(): Observable<Student[]> {
     return of(this.students);
   }
 
+  // when a value  might not exits, undefined is used to safed represent "nothing" instead of crashing  the app
   getById(id: number): Observable<Student | undefined> {
     const student = this.students.find(s => s.id === id);
     return of(student);
   }
 
-  create(student: Student): Observable<void> {
+  //Obserable<void> is suitable if you just want to notify "creation successful"but return of(void 0);
+  //if your UI or logical needs the  new student back prefer Obseravable<Student>
+
+  create(student: Student): Observable<boolean> {
     student.id = this.generateId();
     this.students.push(student);
     //this.studentsSubject.next(this.students);
-    return of(void 0);
+    return of(true);
   }
 
-  // update(id: number, updatedStudent: Student): Observable<void> {
-  //   const index = this.students.findIndex(s => s.id === id);
-  //   if (index !== -1) {
-  //     this.students[index] = { ...updatedStudent, id };
-  //     this.studentsSubject.next(this.students);
-  //   }
-  //   return of();
-  // }
-  update(id:number,updatedStudent:Student):Observable<void>{
+
+  update(id:number,updatedStudent:Student):Observable<Boolean>{
     const index= this.students.findIndex(s=>s.id==id);
     if(index!=-1){
-      this.students[index]={...updatedStudent,id};
+     // this.students[index]={...updatedStudent,id};
+      //Instead of using three dot we do like this
+      this.students[index].id=updatedStudent.id;
+      this.students[index].name=updatedStudent.name;
+       this.students[index].email=updatedStudent.email;
+
      // this.studentsSubject.next(this.students);
     }
-    return of(void 0);
+    return of(true);
   }
 
-
-  delete(id: number): Observable<void> {
+// instead of using void  using boolean  return type
+  delete(id: number): Observable<boolean> {
     this.students = this.students.filter(s => s.id !== id);
-    //this.studentsSubject.next(this.students);
-    return of();
+    ////this.studentsSubject.next(this.students);
+    //return of(void 0);
+    return of(true)
   }
 
   private generateId(): number {
