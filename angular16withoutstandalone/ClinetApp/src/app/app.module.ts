@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   
   ],
   providers: [],
+  // provider is used to register services globally 
+  //providing values/config/token..... available in Dependency Injection  Custom or multiple services instance
   bootstrap: [AppComponent]
 })
 export class AppModule { }
