@@ -9,6 +9,9 @@ export class StudentService {
   private students: Student[] = [
     { id: 1, name: 'John Doe', email: 'john@example.com' },
     { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+    { id:3, name:'Michel Stratch ',email:'michel@gmail.com'},
+    {id:4,name:'Ronaldo',email:'ronaldo@gmai.com'},
+    {id:5,name:'Hari Narayan Yadav',email:'yadav@gmail.com'}
   ];
 
   private studentsSubject = new BehaviorSubject<Student[]>(this.students);
@@ -32,7 +35,7 @@ export class StudentService {
     student.id = this.generateId();
     this.students.push(student);
     this.studentsSubject.next(this.students);
-    return of();
+    return of(void 0);
   }
 
   // update(id: number, updatedStudent: Student): Observable<void> {
