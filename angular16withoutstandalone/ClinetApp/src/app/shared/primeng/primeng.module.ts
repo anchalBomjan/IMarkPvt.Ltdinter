@@ -7,6 +7,7 @@ import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 
 
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     ConfirmDialogModule,
     DropdownModule
     
-  ]
+  ],
+  providers:[ConfirmationService,MessageService]
 })
 export class PrimengModule { }
