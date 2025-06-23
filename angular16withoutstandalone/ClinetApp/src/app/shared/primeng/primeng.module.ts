@@ -2,40 +2,36 @@ import { NgModule } from '@angular/core';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
 import { DialogModule } from 'primeng/dialog';
 import { ToastModule } from 'primeng/toast';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { DropdownModule } from 'primeng/dropdown';
-import { FormsModule } from '@angular/forms';
-import { ConfirmationService, MessageService } from 'primeng/api';
-
-
-
+import { MessageService } from 'primeng/api';
 @NgModule({
   declarations: [],
+  // borrows tools from other teams
   imports: [
     FormsModule,
     TableModule,
     ButtonModule,
     InputTextModule,
+    DropdownModule,
     DialogModule,
-    ToastModule,
-    ConfirmDialogModule,
-    DropdownModule
-  
-
+    ToastModule
   ],
+  //lending tool to others teams
   exports: [
     FormsModule,
     TableModule,
     ButtonModule,
     InputTextModule,
+    DropdownModule,
     DialogModule,
     ToastModule,
-    ConfirmDialogModule,
-    DropdownModule
     
   ],
-  providers:[ConfirmationService,MessageService]
+// some tools need employee(providers) for respective tool(import) here ToastModule need MessageService to work
+  // provider mean hiring employee(services instance)
+  providers:[MessageService]
 })
 export class PrimengModule { }
