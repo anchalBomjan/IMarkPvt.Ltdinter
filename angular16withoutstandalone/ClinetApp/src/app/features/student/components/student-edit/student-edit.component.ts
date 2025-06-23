@@ -20,6 +20,7 @@ export class StudentEditComponent {
   ) {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.studentService.getById(id).subscribe(stu => {
+      //instead of using three dot
       //if (stu) this.student = { ...stu };
       if(stu){
         this.student.id=stu.id;
