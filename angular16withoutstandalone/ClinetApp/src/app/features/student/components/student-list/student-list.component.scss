@@ -1,0 +1,77 @@
+:host {
+    display: block;
+    padding: 1rem;
+  
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      button {
+        min-width: 100px;
+      }
+    }
+  
+    ::ng-deep .p-table {
+      width: 100%;
+  
+      th,
+      td {
+        text-align: center;
+      }
+    }
+  
+    @media screen and (max-width: 576px) {
+      ::ng-deep .p-table {
+        font-size: 0.9rem;
+      }
+    }
+  
+    // ✅ Add fixed floating button styles
+    .add-student-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+      @media (max-width: 576px) {
+        right: 10px;
+        bottom: 10px;
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+      }
+    }
+  
+    // ✅ Optional: round FAB version
+    .fab-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      padding: 0;
+      background-color: #0d6efd;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  
+      .pi {
+        font-size: 1.25rem;
+      }
+  
+      &:hover {
+        background-color: #0b5ed7;
+      }
+    }
+  }
+  ::ng-deep .p-table-scrollable-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+  }
+  
+  

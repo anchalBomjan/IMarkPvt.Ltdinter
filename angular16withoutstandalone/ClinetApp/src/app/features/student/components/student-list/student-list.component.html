@@ -1,54 +1,5 @@
-<!-- 
-
-<p-toast></p-toast>
-
-
-<p-dialog 
-  header="Confirm Delete" 
-  [(visible)]="showDeleteDialog" 
-  [modal]="true" 
-  [closable]="false" 
-  [style]="{ width: '350px' }"
->
-  <p>Are you sure you want to delete this student?</p>
-  <ng-template pTemplate="footer">
-    <button pButton label="Cancel" class="p-button-secondary" (click)="cancelDelete()"></button>
-    <button pButton label="Delete" class="p-button-danger" (click)="confirmDelete()"></button>
-  </ng-template>
-</p-dialog>
-
-
-<p-table [value]="students">
-  <ng-template pTemplate="header">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Actions</th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-student>
-    <tr>
-      <td>{{ student.id }}</td>
-      <td>{{ student.name }}</td>
-      <td>{{ student.email }}</td>
-      <td>
-        <button pButton label="Edit" (click)="editStudent(student.id)"></button>
-        <button pButton label="Delete" class="p-button-danger" (click)="openDeleteDialog(student.id)"></button>
-        <button pButton type="button" label="Delete" class="p-button-danger" (click)="openDeleteDialog(student.id)"></button>
-
-      </td>
-    </tr>
-  </ng-template>
-</p-table> -->
-
-
-<p-toast></p-toast>
-
-<!-- Add Student Button -->
-<button pButton label="Add Student" icon="pi pi-plus" class="p-mb-3" (click)="openCreateDialog()"></button>
-
-<!-- Create Student Dialog -->
+ <!-- <p-toast></p-toast>
+<button pButton label="Add Student" icon="pi pi-plus" class="fat-btn" (click)="openCreateDialog()"></button>
 <p-dialog 
   header="Create Student" 
   [(visible)]="showCreateDialog" 
@@ -88,7 +39,7 @@
   </form>
 </p-dialog>
 
-<!-- Delete Confirmation Dialog -->
+
 <p-dialog 
   header="Confirm Delete" 
   [(visible)]="showDeleteDialog" 
@@ -103,7 +54,6 @@
   </ng-template>
 </p-dialog>
 
-<!-- Student Table -->
 <p-table [value]="students">
   <ng-template pTemplate="header">
     <tr>
@@ -124,4 +74,155 @@
       </td>
     </tr>
   </ng-template>
+</p-table> 
+
+ 
+  -->
+
+<!-- 
+<p-toast></p-toast>
+  <p-table
+  [value]="students"
+  [scrollable]="true"
+  scrollHeight="400px"
+  [responsiveLayout]="'scroll'"
+>
+  
+  <ng-template pTemplate="header">
+    <tr>
+      <th colspan="3">Students</th>
+      <th class="text-end">
+        <button
+          pButton
+          label="Add Student"
+          icon="pi pi-plus"
+          class="p-button-sm p-button-success"
+          (click)="openCreateDialog()"
+        ></button>
+      </th>
+    </tr>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-student>
+    <tr>
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>
+        <button
+          pButton
+          label="Edit"
+          class="p-button-text"
+          (click)="editStudent(student.id)"
+        ></button>
+        <button
+          pButton
+          label="Delete"
+          class="p-button-danger p-button-text"
+          (click)="openDeleteDialog(student.id)"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table> -->
+
+
+<p-toast></p-toast>
+
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <button
+      pButton
+      label="Add Student"
+      icon="pi pi-plus"
+      class="p-button-success"
+      (click)="openCreateDialog()"
+    ></button>
+  </div>
+</p-toolbar>
+
+<p-table [value]="students" [scrollable]="true" scrollHeight="400px" [responsiveLayout]="'scroll'">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-student>
+    <tr>
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>
+        <button
+          pButton
+          label="Edit"
+          class="p-button-text"
+          (click)="editStudent(student.id)"
+        ></button>
+        <button
+          pButton
+          label="Delete"
+          class="p-button-danger p-button-text"
+          (click)="openDeleteDialog(student.id)"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
 </p-table>
+
+<p-dialog header="Create Student" [(visible)]="showCreateDialog" [modal]="true" [closable]="false" [style]="{ width: '400px' }">
+  <form (ngSubmit)="saveStudent()" class="p-fluid">
+    <div class="p-field">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        pInputText
+        [(ngModel)]="newStudent.name"
+        name="name"
+        required
+      />
+    </div>
+
+    <div class="p-field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        pInputText
+        [(ngModel)]="newStudent.email"
+        name="email"
+        required
+      />
+    </div>
+
+    <div class="p-dialog-footer">
+      <button pButton type="button" label="Cancel" class="p-button-text" (click)="showCreateDialog = false"></button>
+      <button pButton type="submit" label="Save" icon="pi pi-save"></button>
+    </div>
+  </form>
+</p-dialog>
+
+<p-dialog
+  header="Confirm Delete"
+  [(visible)]="showDeleteDialog"
+  [modal]="true"
+  [closable]="false"
+  [style]="{ width: '350px' }"
+>
+  <p>Are you sure you want to delete this student?</p>
+  <ng-template pTemplate="footer">
+    <button pButton label="Cancel" class="p-button-secondary" (click)="cancelDelete()"></button>
+    <button pButton label="Delete" class="p-button-danger" (click)="confirmDelete()"></button>
+  </ng-template>
+</p-dialog>

@@ -1,48 +1,7 @@
 <!-- 
-<form (ngSubmit)="save()" class="p-fluid">
- 
-  <div class="p-field">
-    <label for="name">Name</label>
-    <input
-      id="name"
-      type="text"
-      pInputText
-      [(ngModel)]="student.name"
-      name="name"
-      required
-    />
-  </div>
-
-
-  <div class="p-field">
-    <label for="email">Email</label>
-    <input
-      id="email"
-      type="email"
-      pInputText
-      [(ngModel)]="student.email"
-      name="email"
-      required
-    />
-  </div>
-
-
-  <button
-    type="submit"
-    pButton
-    label="Save"
-    icon="pi pi-save"
-    class="p-mt-2"
-  ></button>
-
-</form> -->
-<!-- Button to open create dialog -->
 <p-toast></p-toast>
 <button pButton label="Add Student" icon="pi pi-plus" (click)="openDialog()"></button>
-
-<!-- Dialog with student form -->
 <p-dialog header="Create Student" [(visible)]="showDialog" [modal]="true" [closable]="false" [style]="{ width: '400px' }">
-
   <form (ngSubmit)="save()" class="p-fluid">
     <div class="p-field">
       <label for="name">Name</label>
@@ -74,4 +33,39 @@
     </div>
   </form>
 
+</p-dialog> -->
+
+<!-- Toast Notification -->
+<p-toast></p-toast>
+
+<!-- Button to open dialog -->
+<button pButton type="button" label="Add Student" icon="pi pi-plus" (click)="openDialog()"></button>
+
+<!-- Student Create Dialog -->
+<p-dialog header="Create Student"
+          [(visible)]="showDialog"
+          [modal]="true"
+          [closable]="false"
+          styleClass="responsive-dialog"
+          [breakpoint]="576">
+
+
+  <form (ngSubmit)="save()" class="p-fluid">
+    <div class="p-field">
+      <label for="name">Name</label>
+      <input id="name" type="text" pInputText [(ngModel)]="student.name" name="name" required />
+    </div>
+
+    <div class="p-field">
+      <label for="email">Email</label>
+      <input id="email" type="email" pInputText [(ngModel)]="student.email" name="email" required />
+    </div>
+
+    <div class="p-dialog-footer d-flex justify-content-end gap-2">
+      <button pButton type="button" label="Cancel" class="p-button-text" (click)="closeDialog()"></button>
+      <button pButton type="submit" label="Save" icon="pi pi-save"></button>
+    </div>
+  </form>
+
 </p-dialog>
+

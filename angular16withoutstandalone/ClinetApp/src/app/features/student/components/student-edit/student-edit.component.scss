@@ -1,0 +1,27 @@
+:host {
+    display: block;
+  
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+  
+      .form-group {
+        margin-bottom: 1rem;
+  
+        label {
+          font-weight: 600;
+        }
+  
+        input {
+          width: 100%;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 576px) {
+      .card {
+        padding: 1rem;
+      }
+    }
+  }
+  
