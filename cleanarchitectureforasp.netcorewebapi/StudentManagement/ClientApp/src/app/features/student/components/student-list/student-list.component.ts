@@ -27,13 +27,15 @@ export class StudentListComponent {
   ) {
 
 
-  console.log('Component loaded');
+  
     this.loadStudents();
   }
 
   loadStudents(): void {
     this.studentService.getAllStudents().subscribe(data => {
       this.students = data;
+
+      console.log('Student loaded',data);
     });
   }
 
@@ -63,23 +65,33 @@ export class StudentListComponent {
   }
 
   openCreateDialog() {
-    this.newStudent = { name: '', email: '', age: 0 };
+    // this.newStudent = { name: '', email: '', age: 0 };
     this.showCreateDialog = true;
   }
 
   saveStudent() {
-    this.studentService.addStudent(this.newStudent).subscribe(() => {
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Created',
-        detail: 'Student added successfully'
-      });
-      this.showCreateDialog = false;
-      this.loadStudents();
+    console.log('Saving Student:', this.newStudent);// Log the student data veing sent
+    this.studentService.addStudent(this.newStudent).subscribe({
+   
+      next:(response)=>{
+        console.log('Student saved successfully:',response);
+        this.messageService.add({
+          severity:'success',
+          summary:'success',
+          detail:'Student added successfully'
+
+        });
+
+        this.showCreateDialog=false;
+        this.loadStudents();
+      },
+      error:(error)=>{
+      console.log('Error saving student',error);
+      }
     });
   }
-
   editStudent(id: number) {
     this.router.navigate(['/students/edit', id]);
   }
 }
+

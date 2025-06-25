@@ -47,51 +47,6 @@
   </ng-template>
 </p-table>
 
-<p-dialog header="Create Student" [(visible)]="showCreateDialog" [modal]="true" [closable]="false" [style]="{ width: '400px' }">
-  <form (ngSubmit)="saveStudent()" class="p-fluid">
-
-    <div class="p-field">
-      <label for="name">Name</label>
-      <input
-        id="name"
-        type="text"
-        pInputText
-        [(ngModel)]="newStudent.name"
-        name="Name"
-        required
-      />
-    </div>
-
-    <div class="p-field">
-      <label for="email">Email</label>
-      <input
-        id="email"
-        type="email"
-        pInputText
-        [(ngModel)]="newStudent.email"
-        name="Email"
-        required
-      />
-    </div>
-
-    <div class="p-field">
-      <label for="age">Age</label>
-      <input
-        id="age"
-        type="number"
-        pInputText
-        [(ngModel)]="newStudent.age"
-        name="Age"
-        required
-      />
-    </div>
-
-    <div class="p-dialog-footer">
-      <button pButton type="button" label="Cancel" class="p-button-text" (click)="showCreateDialog = false"></button>
-      <button pButton type="submit" label="Save" icon="pi pi-save"></button>
-    </div>
-  </form>
-</p-dialog>
 
 <p-dialog
   header="Confirm Delete"
@@ -106,3 +61,9 @@
     <button pButton label="Delete" class="p-button-danger" (click)="confirmDelete()"></button>
   </ng-template>
 </p-dialog>
+
+
+<div *ngIf="showCreateDialog">
+  <app-student-create >
+  </app-student-create>
+</div>
