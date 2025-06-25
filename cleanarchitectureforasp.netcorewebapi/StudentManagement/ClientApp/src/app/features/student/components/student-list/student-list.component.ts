@@ -65,7 +65,6 @@ export class StudentListComponent {
   }
 
   openCreateDialog() {
-    // this.newStudent = { name: '', email: '', age: 0 };
     this.showCreateDialog = true;
   }
 

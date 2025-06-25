@@ -62,8 +62,13 @@
   </ng-template>
 </p-dialog>
 
-
+<!-- 
 <div *ngIf="showCreateDialog">
   <app-student-create >
   </app-student-create>
-</div>
+</div> -->
+<app-student-create
+  [showCreateDialog]="showCreateDialog"
+  (studentSaved)="loadStudents()"
+  (closeDialog)="showCreateDialog = false"
+></app-student-create>
