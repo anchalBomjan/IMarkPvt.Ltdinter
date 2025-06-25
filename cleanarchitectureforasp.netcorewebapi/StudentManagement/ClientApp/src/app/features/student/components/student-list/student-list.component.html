@@ -26,9 +26,9 @@
   <ng-template pTemplate="body" let-student>
     <tr>
       <td>{{ student.id }}</td>
-      <td>{{ student.Name }}</td>
-      <td>{{ student.Email }}</td>
-      <td>{{ student.Age }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.age }}</td>
       <td>
         <button
           pButton
@@ -49,13 +49,25 @@
 
 <p-dialog header="Create Student" [(visible)]="showCreateDialog" [modal]="true" [closable]="false" [style]="{ width: '400px' }">
   <form (ngSubmit)="saveStudent()" class="p-fluid">
+
+    <div class="p-field">
+      <label for="name">Id</label>
+      <input
+        id="name"
+        type="text"
+        pInputText
+        [(ngModel)]="newStudent.id"
+        name="Name"
+        required
+      />
+    </div>
     <div class="p-field">
       <label for="name">Name</label>
       <input
         id="name"
         type="text"
         pInputText
-        [(ngModel)]="newStudent.Name"
+        [(ngModel)]="newStudent.name"
         name="Name"
         required
       />
@@ -67,7 +79,7 @@
         id="email"
         type="email"
         pInputText
-        [(ngModel)]="newStudent.Email"
+        [(ngModel)]="newStudent.email"
         name="Email"
         required
       />
@@ -79,7 +91,7 @@
         id="age"
         type="number"
         pInputText
-        [(ngModel)]="newStudent.Age"
+        [(ngModel)]="newStudent.age"
         name="Age"
         required
       />

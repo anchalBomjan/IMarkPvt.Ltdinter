@@ -1,7 +1,7 @@
  export interface IStudent{
 id?:number
-Name:string;
-Email:string;
-Age: number;
+name:string;
+email:string;
+age: number;
 
  }
