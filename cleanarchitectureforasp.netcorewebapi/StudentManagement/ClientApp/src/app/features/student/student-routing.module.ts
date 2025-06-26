@@ -14,7 +14,8 @@ import { StudentEditComponent } from './components/student-edit/student-edit.com
 const routes: Routes = [
   { path: '', component: StudentListComponent },
   { path: 'create', component: StudentCreateComponent },
-  { path: 'edit/:id', component: StudentEditComponent }
+  { path: 'edit/:id', component: StudentEditComponent },
+
 ];
 
 

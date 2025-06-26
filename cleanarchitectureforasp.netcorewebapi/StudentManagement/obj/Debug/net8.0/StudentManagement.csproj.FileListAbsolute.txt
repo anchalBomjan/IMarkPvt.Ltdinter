@@ -135,3 +135,9 @@ D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin
 D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\ClientApp\angular.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\ClientApp\package-lock.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\ClientApp\package.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\ClientApp\tsconfig.app.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\ClientApp\tsconfig.json
+D:\IMarkPvt.Ltdinter\cleanarchitectureforasp.netcorewebapi\StudentManagement\bin\Debug\net8.0\ClientApp\tsconfig.spec.json
