@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IStudent } from 'src/app/core/models/student';
 import { StudentService } from 'src/app/core/services/Student.Service';
 import { MessageService } from 'primeng/api';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-create',
@@ -16,10 +17,24 @@ export class StudentCreateComponent {
 
   newStudent: IStudent = { id: 0, name: '', email: '', age: 0 };
 
-  constructor(
-    private studentService: StudentService,
-    private messageService: MessageService
-  ) {}
+  constructor( private studentService: StudentService,private messageService: MessageService ,private router:Router) 
+  {
+
+    this.checkRoute();
+
+  }
+
+  checkRoute(){
+     // Listen to route changes
+     this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (event.url.includes('/students/create')) {
+          this.showCreateDialog = true;
+        }
+      }
+    });
+
+  }
 
   saveStudent() {
     console.log('Saving Student:', this.newStudent);
@@ -44,10 +59,15 @@ export class StudentCreateComponent {
       }
     });
   }
+  cancel(){
+    this.close();
+  }
 
-  cancel() {
+
+  private close() {
     this.closeDialog.emit(); // Tells parent to close dialog
     this.resetForm();
+    this.router.navigate(['/students']);
   }
 
   private resetForm() {
