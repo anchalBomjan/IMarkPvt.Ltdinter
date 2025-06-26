@@ -34,7 +34,7 @@
           pButton
           label="Edit"
           class="p-button-text"
-          (click)="editStudent(student.id)"
+          (click)="openEditDialog(student.id)"
         ></button>
         <button
           pButton
@@ -69,6 +69,7 @@
 </div> -->
 <app-student-create
   [showCreateDialog]="showCreateDialog"
+  [mode]="mode"
   (studentSaved)="loadStudents()"
   (closeDialog)="showCreateDialog = false"
 ></app-student-create>

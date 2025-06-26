@@ -1,6 +1,7 @@
 <p-toast> </p-toast>
 <p-dialog
-  header="Create Student"
+  [header]="mode === 'edit' ? 'Edit Student' : 'Create Student'"
+
   [(visible)]="showCreateDialog"  
   [modal]="true"
   [closable]="false"
