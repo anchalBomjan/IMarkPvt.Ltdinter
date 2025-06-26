@@ -21,9 +21,18 @@ export class StudentCreateComponent {
   {
 
     this.checkRoute();
+    this. loadStudents();
 
   }
 
+
+  loadStudents(){
+    this.studentService.getAllStudents().subscribe(data=>{
+      console.log('student loaded while create/student',data);
+    })
+  }
+
+  // this  will provided values to open p diaglog box of component.html 
   checkRoute(){
      // Listen to route changes
      this.router.events.subscribe(event => {
@@ -46,8 +55,13 @@ export class StudentCreateComponent {
           detail: 'Student added successfully'
         });
         this.studentSaved.emit(); // Notify parent to reload students
-        this.closeDialog.emit();  // Close the dialog
-        this.resetForm();
+       this.closeDialog.emit();  // Close the dialog
+       this.resetForm();
+
+        /// this below for create/student
+        this.showCreateDialog=false;
+        this.router.navigate(['/students'])
+        
       },
       error: (error) => {
         console.error('Error saving student', error);
@@ -59,6 +73,9 @@ export class StudentCreateComponent {
       }
     });
   }
+
+
+
   cancel(){
     this.close();
   }
@@ -67,7 +84,7 @@ export class StudentCreateComponent {
   private close() {
     this.closeDialog.emit(); // Tells parent to close dialog
     this.resetForm();
-    this.router.navigate(['/students']);
+    this.router.navigate(['/students']);  //  this extra line helps to work  throught create/student
   }
 
   private resetForm() {
