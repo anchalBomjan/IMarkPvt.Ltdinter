@@ -19,17 +19,10 @@ export class StudentListComponent {
   showCreateDialog = false;
   newStudent: IStudent = {id:0, name: '', email: '', age: 0 };
 
-  constructor(
-    private studentService: StudentService,
-    private messageService: MessageService,
-    private router: Router,
-    
-  ) {
-
-
-  
+  constructor( private studentService: StudentService, private messageService: MessageService,private router: Router,)
+   {
     this.loadStudents();
-  }
+   }
 
   loadStudents(): void {
     this.studentService.getAllStudents().subscribe(data => {
@@ -84,8 +77,14 @@ export class StudentListComponent {
         this.showCreateDialog=false;
         this.loadStudents();
       },
+
       error:(error)=>{
       console.log('Error saving student',error);
+      this.messageService.add({
+        severity:'error',
+        summary:'eror',
+        detail:' fail to load'
+      })
       }
     });
   }

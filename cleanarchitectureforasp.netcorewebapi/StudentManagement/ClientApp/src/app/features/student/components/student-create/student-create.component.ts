@@ -60,7 +60,11 @@ export class StudentCreateComponent {
 
         /// this below for create/student
         this.showCreateDialog=false;
-        this.router.navigate(['/students'])
+       // this.router.navigate(['/students'])
+
+        setTimeout(() => {
+          this.router.navigate(['/students']);
+        }, 2000);
         
       },
       error: (error) => {
@@ -70,7 +74,11 @@ export class StudentCreateComponent {
           summary: 'Error',
           detail: 'Failed to save student'
         });
+        setTimeout(() => {
+          this.router.navigate(['/students']);
+        }, 2000);
       }
+      
     });
   }
 
