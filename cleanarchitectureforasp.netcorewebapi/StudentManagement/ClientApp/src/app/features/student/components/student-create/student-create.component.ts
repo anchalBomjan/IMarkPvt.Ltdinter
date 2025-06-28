@@ -4,7 +4,6 @@ import { IStudent } from 'src/app/core/models/student';
 import { StudentService } from 'src/app/core/services/Student.Service';
 import { MessageService } from 'primeng/api';
 import { NavigationEnd, Router } from '@angular/router';
-
 @Component({
   selector: 'app-student-create',
   templateUrl: './student-create.component.html',
@@ -12,10 +11,7 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class StudentCreateComponent {
   @Input() showCreateDialog: boolean = false;
-
-
-
-  private _student: IStudent = { id: 0, name: '', email: '', age: 0 };
+  private _student: IStudent = {  name: '', email: '', age: 0 };
   @Input()
   set student(value: IStudent) {
     this._student = { ...value };
@@ -35,12 +31,7 @@ export class StudentCreateComponent {
   }
   @Output() closeDialog = new EventEmitter<void>(); // Emits when the dialog needs to close
   @Output() studentSaved = new EventEmitter<void>();
-
-
- 
-
-
-  newStudent: IStudent = { id: 0, name: '', email: '', age: 0 }; //  this   id for create/student
+  newStudent: IStudent = {  name: '', email: '', age: 0 }; //  this   id for create/student
 
   constructor( private studentService: StudentService,private messageService: MessageService ,private router:Router) 
   {
@@ -130,9 +121,6 @@ export class StudentCreateComponent {
     }
   
   }
-
-
-
   cancel(){
     this.close();
   }
@@ -145,6 +133,7 @@ export class StudentCreateComponent {
   }
 
   private resetForm() {
-    this.newStudent = { id: 0, name: '', email: '', age: 0 };
+    this.newStudent = {  name: '', email: '', age: 0 };
   }
 }
+

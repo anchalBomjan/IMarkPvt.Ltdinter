@@ -18,7 +18,7 @@ export class StudentListComponent {
 
 
   mode:'create'|'edit'='create';
-  newStudent: IStudent = {id:0, name: '', email: '', age: 0 };
+  newStudent: IStudent = { name: '', email: '', age: 0 };
 
 
    constructor( private studentService: StudentService, private messageService: MessageService,private router: Router,private route:ActivatedRoute)
