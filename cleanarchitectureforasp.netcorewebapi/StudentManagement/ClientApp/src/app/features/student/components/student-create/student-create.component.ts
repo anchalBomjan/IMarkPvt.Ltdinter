@@ -1,5 +1,5 @@
 
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { IStudent } from 'src/app/core/models/student';
 import { StudentService } from 'src/app/core/services/Student.Service';
 import { MessageService } from 'primeng/api';
@@ -16,6 +16,8 @@ export class StudentCreateComponent {
   set student(value: IStudent) {
     this._student = { ...value };
     this.newStudent = { ...this._student }; // update internal model immediately
+    this.cdr.markForCheck();
+
   }
   get student(): IStudent {
     return this._student;
@@ -33,7 +35,7 @@ export class StudentCreateComponent {
   @Output() studentSaved = new EventEmitter<void>();
   newStudent: IStudent = {  name: '', email: '', age: 0 }; //  this   id for create/student
 
-  constructor( private studentService: StudentService,private messageService: MessageService ,private router:Router) 
+  constructor( private studentService: StudentService,private messageService: MessageService ,private router:Router ,private cdr: ChangeDetectorRef) 
   {
 
     this.checkRoute();
@@ -67,7 +69,7 @@ export class StudentCreateComponent {
     if (this.mode=='edit')
     {
       if(this.newStudent.id!==undefined){
-        this.studentService.updateStudent(this.newStudent.id, this.student).subscribe({
+        this.studentService.updateStudent(this.newStudent.id!, this.newStudent).subscribe({
           next: () => {
             this.messageService.add({ severity: 'success', summary: 'Updated', detail: 'Student updated successfully' });
             this.studentSaved.emit();

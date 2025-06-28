@@ -56,14 +56,21 @@ export class StudentListComponent {
     this.mode='edit';
     this.studentService.getStudentById(id).subscribe(student=>{
       console.log("edit details:", student);
-      //this.newStudent={...student};
+      this.newStudent={...student};
 
-      this.newStudent.id=student.id;
-      this.newStudent.name=student.name;
-      this.newStudent.email=student.email;
-      this.newStudent.age=student.age;
 
+      // if we doing below then we unable to  get data
+      // this.newStudent.name=student.name;
+      // this.newStudent.email=student.email;
+      // this.newStudent.age=student.age;
+
+      // setTimeout(()=>{
+      //   this.showCreateDialog =true;
+
+      // },0);
       this.showCreateDialog =true;
+
+    
     })
   }
   openDeleteDialog(id: number) {

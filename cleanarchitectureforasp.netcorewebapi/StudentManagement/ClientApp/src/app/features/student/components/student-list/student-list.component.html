@@ -70,6 +70,7 @@
 <app-student-create
   [showCreateDialog]="showCreateDialog"
   [mode]="mode"
+  [student]="newStudent"     
   (studentSaved)="loadStudents()"
   (closeDialog)="showCreateDialog = false"
 ></app-student-create>
