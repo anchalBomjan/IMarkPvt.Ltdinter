@@ -61,7 +61,7 @@ export class StudentListComponent {
       this.newStudent={...student};
 
 
-      // if we do then we unable to  get data
+      //  from this traditional way unable to load while editing so we used spread operation as above
       // this.newStudent.name=student.name;
       // this.newStudent.email=student.email;
       // this.newStudent.age=student.age;
@@ -104,49 +104,12 @@ export class StudentListComponent {
     this.showCreateDialog = true;
   }
 
-  // saveStudent() {
-  //   console.log('Saving Student:', this.newStudent);// Log the student data veing sent
-  //   if(this.mode=='edit'){
+ 
 
-      
-
-  //   } else{
-  //     this.studentService.addStudent(this.newStudent).subscribe({
-   
-  //       next:(response)=>{
-  //         console.log('Student saved successfully:',response);
-  //         this.messageService.add({
-  //           severity:'success',
-  //           summary:'success',
-  //           detail:'Student added successfully'
-  
-  //         });
-  
-  //         this.showCreateDialog=false;
-  //         this.loadStudents();
-  //       },
-  
-  //       error:(error)=>{
-  //       console.log('Error saving student',error);
-  //       this.messageService.add({
-  //         severity:'error',
-  //         summary:'eror',
-  //         detail:' fail to load'
-  //       })
-  //       }
-  //     });
-
-
-
-  //   }
-  
+  //  // if used seperate component for edit then  used like this 
+  // editStudent(id: number) {
+  //   this.router.navigate(['/students/edit', id]);
   // }
-  
-
-   // if used seperate component for edit then  used like this 
-  editStudent(id: number) {
-    this.router.navigate(['/students/edit', id]);
-  }
 
 }
 
