@@ -15,8 +15,6 @@ export class StudentListComponent {
   showDeleteDialog = false;
   showCreateDialog = false;
   selectedStudentId: number | null = null;
-
-
   mode:'create'|'edit'='create';
   newStudent: IStudent = { name: '', email: '', age: 0 };
 
@@ -59,7 +57,7 @@ export class StudentListComponent {
     this.mode='edit';
     this.studentService.getStudentById(id).subscribe(student=>{
       console.log("edit details:", student);
-      this.newStudent={...student};
+      this.newStudent={...student}; // copy student for edit
 
 
       //  from this traditional way unable to load while editing so we used spread operation as above

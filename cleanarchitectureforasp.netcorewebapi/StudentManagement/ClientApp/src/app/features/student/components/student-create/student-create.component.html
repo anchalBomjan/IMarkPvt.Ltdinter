@@ -1,4 +1,4 @@
-<p-toast> </p-toast>
+<!-- <p-toast> </p-toast>
 <p-dialog
   [header]="mode === 'edit' ? 'Edit Student' : 'Create Student'"
 
@@ -51,4 +51,80 @@
   </form>
 </p-dialog>
 
- 
+  -->
+
+
+<p-toast></p-toast>
+  <p-dialog
+  [header]="mode === 'edit' ? 'Edit Student' : 'Create Student'"
+  [(visible)]="showCreateDialog"
+  [modal]="true"
+  [closable]="false"
+  [style]="{ width: '35vw' }"
+>
+  <form #studentForm="ngForm" (ngSubmit)="saveStudent()" class="p-fluid">
+    <div class="p-field">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        pInputText
+        [(ngModel)]="newStudent.name"
+        name="name"
+        required
+        #nameRef="ngModel"
+      />
+      <div *ngIf="nameRef.invalid && nameRef.touched" class="p-error">Name is required.</div>
+    </div>
+
+    <div class="p-field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        pInputText
+        [(ngModel)]="newStudent.email"
+        name="email"
+        required
+        email
+        #emailRef="ngModel"
+      />
+      <div *ngIf="emailRef.invalid && emailRef.touched" class="p-error">
+        <div *ngIf="emailRef.errors?.['required']">Email is required.</div>
+        <div *ngIf="emailRef.errors?.['email']">Invalid email format.</div>
+      </div>
+    </div>
+
+    <div class="p-field">
+      <label for="age">Age</label>
+      <input
+        id="age"
+        type="number"
+        pInputText
+        [(ngModel)]="newStudent.age"
+        name="age"
+        required
+        min="5"
+        max="60"
+        #ageRef="ngModel"
+      />
+      <div *ngIf="ageRef.invalid && ageRef.touched" class="p-error">
+        <div *ngIf="ageRef.errors?.['required']">Age is required.</div>
+        <div *ngIf="ageRef.errors?.['min'] || ageRef.errors?.['max']">
+          Age must be between 5 and 60.
+        </div>
+      </div>
+    </div>
+
+    <div class="p-dialog-footer">
+      <button pButton type="button" label="Cancel" class="p-button-text" (click)="cancel()"></button>
+      <button
+        pButton
+        type="submit"
+        label="Save"
+        icon="pi pi-save"
+        [disabled]="studentForm.invalid"
+      ></button>
+    </div>
+  </form>
+</p-dialog>
