@@ -1,5 +1,5 @@
-
-<p-toast></p-toast>
+ <!-- using NgModel for validation -->
+<!-- <p-toast></p-toast>
   <p-dialog
   [header]="mode === 'edit' ? 'Edit Student' : 'Create Student'"
   [(visible)]="showCreateDialog"
@@ -72,4 +72,52 @@
       ></button>
     </div>
   </form>
+</p-dialog> -->
+
+
+<p-toast></p-toast>
+
+<p-dialog
+[header]="mode === 'edit' ? 'Edit Student' : 'Create Student'"
+[(visible)]="showCreateDialog"
+[modal]="true"
+[closable]="false"
+[style]="{ width: '35vw' }"
+>
+
+
+  <form [formGroup]="studentForm" (ngSubmit)="saveStudent()" class="p-fluid">
+    
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" type="text" pInputText formControlName="name" />
+      <div *ngIf="f['name'].touched && f['name'].invalid" class="p-error">Name is required</div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" type="email" pInputText formControlName="email" />
+      <div *ngIf="f['email'].touched && f['email'].invalid" class="p-error">
+        <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+        <div *ngIf="f['email'].errors?.['email']">Invalid email format.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="age">Age</label>
+      <input id="age" type="number" pInputText formControlName="age" />
+      <div *ngIf="f['age'].touched && f['age'].invalid" class="p-error">
+        <div *ngIf="f['age'].errors?.['required']">Age is required.</div>
+        <div *ngIf="f['age'].errors?.['min'] || f['age'].errors?.['max']">
+          Age must be between 5 and 60.
+        </div>
+      </div>
+    </div>
+
+    <div class="p-d-flex p-jc-end">
+      <button type="button" pButton label="Cancel" class="p-button-text" (click)="close()"></button>
+      <button type="submit" pButton label="Save" [disabled]="studentForm.invalid"></button>
+    </div>
+  </form>
 </p-dialog>
+

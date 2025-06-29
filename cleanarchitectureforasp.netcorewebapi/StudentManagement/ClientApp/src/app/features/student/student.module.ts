@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { StudentCreateComponent } from './components/student-create/student-create.component';
 import { StudentEditComponent } from './components/student-edit/student-edit.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,10 @@ import { StudentListComponent } from './components/student-list/student-list.com
     CommonModule,
     StudentRoutingModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class StudentModule { }
+
+
