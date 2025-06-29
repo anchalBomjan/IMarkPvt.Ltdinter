@@ -59,6 +59,10 @@ export class StudentListComponent {
       console.log("edit details:", student);
       this.newStudent={...student}; // copy student for edit
 
+     // example spread operator  should  used when nested object arenot deeply cloned
+     // const student = { name: 'John', email: 'john@example.com' };
+     // const copiedStudent = { ...student };
+
 
       //  from this traditional way unable to load while editing so we used spread operation as above
       // this.newStudent.name=student.name;
