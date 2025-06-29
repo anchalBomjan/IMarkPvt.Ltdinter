@@ -3,25 +3,45 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
 ## Development server
+[Parent] StudentListComponent
+└── opens dialog via showCreateDialog = true
+└── passes: [student], [mode]
+└── listens:, (closeDialog)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Child] StudentCreateComponent
+└── uses [mode] to decide between create/edit
+└── uses saveStudent()
+└── 
+└── emits closeDialog to close the dialog
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---# 🏫 Student Management System (Angular + PrimeNG)
 
-## Build
+This project is a Student Management System built with Angular and PrimeNG. It allows you to:
+- View a list of students
+- Add a new student using a PrimeNG dialog
+- Edit student details via the same dialog
+- Delete a student with confirmation
+- Perform navigation using Angular Router
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 📁 Project Structure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Features
 
-## Running end-to-end tests
+- 🔁 **Reusable dialog** for both `Create` and `Edit` mode (controlled by `[mode]` input).
+- 🎯 Two-way communication using `@Input()` and `@Output()`.
+- 📥 Parent-Child Component Communication:
+  - Parent opens dialog, passes data to child.
+  - Child emits `studentSaved` or `closeDialog` to notify parent.
+- ✨ PrimeNG for rich UI components like:
+  - `p-table` (student list)
+  - `p-dialog` (form and delete confirmation)
+  - `p-toast` (notification)
+  - `p-toolbar` (header actions)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🧩 Component Communication Flow
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
