@@ -27,21 +27,22 @@ export class StudentListComponent {
     
  
 
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        const url = event.urlAfterRedirects;
+     // we have components that deals with both  edit and delete operation throught p-dialog box  so we doneed to do this snap.shot
+    // this.router.events.subscribe(event => {
+    //   if (event instanceof NavigationEnd) {
+    //     const url = event.urlAfterRedirects;
   
-        const id = this.route.snapshot.paramMap.get('id');
+    //     const id = this.route.snapshot.paramMap.get('id');
   
-        if (url.includes('/students/edit') && id) {
-          this.openEditDialog(+id);
-        }
+    //     if (url.includes('/students/edit') && id) {
+    //       this.openEditDialog(+id);
+    //     }
   
-        if (url.includes('/students/create')) {
-          this.openCreateDialog();
-        }
-      }
-    });
+    //     if (url.includes('/students/create')) {
+    //       this.openCreateDialog();
+    //     }
+    //   }
+    // });
    }
 
   loadStudents(): void {
