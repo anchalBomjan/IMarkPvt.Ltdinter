@@ -16,7 +16,7 @@ export class StudentCreateComponent {
   set student(value: IStudent) {
     this._student = { ...value };
     this.newStudent = { ...this._student }; // update internal model immediately
-    this.cdr.markForCheck();
+    //this.cdr.markForCheck();
 
   }
   get student(): IStudent {
@@ -31,8 +31,8 @@ export class StudentCreateComponent {
   get mode(): 'create' | 'edit' {
     return this._mode;
   }
-  @Output() closeDialog = new EventEmitter<void>(); // Emits when the dialog needs to close
-  @Output() studentSaved = new EventEmitter<void>();
+  @Output() closeDialog = new EventEmitter<void>(); // Emits when the dialog needs to close i.e means using closeDialog of listComponent.ts function so needed to notify to use
+  //@Output() studentSaved = new EventEmitter<void>(); // there is no any studentSaved function in listcomponent.ts . we used Studentsaved function of create.comopennt.ts function so no need to notifiy 
   newStudent: IStudent = {  name: '', email: '', age: 0 }; //  this   id for create/student
 
   constructor( private studentService: StudentService,private messageService: MessageService ,private router:Router ,private cdr: ChangeDetectorRef) 
@@ -72,8 +72,8 @@ export class StudentCreateComponent {
         this.studentService.updateStudent(this.newStudent.id!, this.newStudent).subscribe({
           next: () => {
             this.messageService.add({ severity: 'success', summary: 'Updated', detail: 'Student updated successfully' });
-            this.studentSaved.emit();
-            this.closeDialog.emit();
+          //  this.studentSaved.emit(); // this mean parent-> child after t
+           this.cancel();
           },
           error: () => {
             this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Update failed' });
@@ -93,12 +93,12 @@ export class StudentCreateComponent {
             summary: 'Success',
             detail: 'Student added successfully'
           });
-          this.studentSaved.emit(); // Notify parent to reload students
-         this.closeDialog.emit();  // Close the dialog
+        // this.studentSaved.emit(); // Notify parent to reload students  
+         this.closeDialog.emit();  // Close the dialog     
          this.resetForm();
   
           /// this below for create/student
-          this.showCreateDialog=false;
+       //  this.showCreateDialog=false;       
          // this.router.navigate(['/students'])
   
           setTimeout(() => {

@@ -52,6 +52,8 @@ export class StudentListComponent {
     });
   }
 
+
+  // if we used P-dialog box for edit then used this typeSS
   openEditDialog(id:number){
     this.mode='edit';
     this.studentService.getStudentById(id).subscribe(student=>{
@@ -59,7 +61,7 @@ export class StudentListComponent {
       this.newStudent={...student};
 
 
-      // if we doing below then we unable to  get data
+      // if we do then we unable to  get data
       // this.newStudent.name=student.name;
       // this.newStudent.email=student.email;
       // this.newStudent.age=student.age;
@@ -69,8 +71,6 @@ export class StudentListComponent {
 
       // },0);
       this.showCreateDialog =true;
-
-    
     })
   }
   openDeleteDialog(id: number) {
@@ -139,6 +139,9 @@ export class StudentListComponent {
     }
   
   }
+  
+
+   // if used seperate component for edit then  used like this 
   editStudent(id: number) {
     this.router.navigate(['/students/edit', id]);
   }
