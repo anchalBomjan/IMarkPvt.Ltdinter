@@ -203,14 +203,10 @@ export class StudentCreateComponent {
     
   ) {
     this.checkRoute();
-    this.loadStudents();
+  
   }
 
-  loadStudents() {
-    this.studentService.getAllStudents().subscribe(data => {
-      console.log('student loaded while create/student', data);
-    });
-  }
+
 
   checkRoute() {
     this.router.events.subscribe(event => {
@@ -263,18 +259,17 @@ export class StudentCreateComponent {
             summary: 'Success',
             detail: 'Student added successfully'
           });
-        // this.studentSaved.emit(); // Notify parent to reload students  
-        // inside addStudent success
-          this.studentSaved.emit();
+       
+          
+          this.studentSaved.emit();  //  this helps to notify to parent component to succesufully added and  please reload student list
           this.closeDialog.emit();
           this.resetForm();
 
   
-          /// this below for create/student
-       //  this.showCreateDialog=false;       
-         // this.router.navigate(['/students'])
+      
          
   
+          // this helps to load or show the list of student while student/create . ie using child component to child component ts
           setTimeout(() => {
             this.router.navigate(['/students']);
           }, 2000);
