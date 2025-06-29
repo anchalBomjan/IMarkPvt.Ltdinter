@@ -174,16 +174,16 @@ export class StudentCreateComponent {
 set student(value:IStudent){
 
   this._student={...value};
-  this. studentForm.patchValue(this._student);
+  this. studentForm.patchValue(this._student);  // copy the value passed by  parentComponent
   if(this._mode=='create'){
-    this.resetForm();
+    this.resetForm();           
 
   }
 }
 get student():IStudent{
   return this._student;
 }
-private _mode: 'create' | 'edit' = 'create';
+private _mode: 'create' | 'edit' = 'create'; // declares mode andhelps to store fetch mode from parentComponent
 @Input()
 set mode(value: 'create' | 'edit') {
   this._mode = value;
@@ -219,6 +219,8 @@ get mode(): 'create' | 'edit' {
     this.checkRoute();
 
   }
+
+  // this will helps to trigger p-dialog box by passing true  when students/create
   checkRoute() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
