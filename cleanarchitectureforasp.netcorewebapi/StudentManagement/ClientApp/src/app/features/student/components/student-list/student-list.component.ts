@@ -99,46 +99,48 @@ export class StudentListComponent {
   }
 
   openCreateDialog() {
+    this.mode='create';
+    this.newStudent={name:'',email:'',age:0}; // this is necessary to  reset form data while using same templete for edit and delete throught dialog box
     this.showCreateDialog = true;
   }
 
-  saveStudent() {
-    console.log('Saving Student:', this.newStudent);// Log the student data veing sent
-    if(this.mode=='edit'){
+  // saveStudent() {
+  //   console.log('Saving Student:', this.newStudent);// Log the student data veing sent
+  //   if(this.mode=='edit'){
 
       
 
-    } else{
-      this.studentService.addStudent(this.newStudent).subscribe({
+  //   } else{
+  //     this.studentService.addStudent(this.newStudent).subscribe({
    
-        next:(response)=>{
-          console.log('Student saved successfully:',response);
-          this.messageService.add({
-            severity:'success',
-            summary:'success',
-            detail:'Student added successfully'
+  //       next:(response)=>{
+  //         console.log('Student saved successfully:',response);
+  //         this.messageService.add({
+  //           severity:'success',
+  //           summary:'success',
+  //           detail:'Student added successfully'
   
-          });
+  //         });
   
-          this.showCreateDialog=false;
-          this.loadStudents();
-        },
+  //         this.showCreateDialog=false;
+  //         this.loadStudents();
+  //       },
   
-        error:(error)=>{
-        console.log('Error saving student',error);
-        this.messageService.add({
-          severity:'error',
-          summary:'eror',
-          detail:' fail to load'
-        })
-        }
-      });
+  //       error:(error)=>{
+  //       console.log('Error saving student',error);
+  //       this.messageService.add({
+  //         severity:'error',
+  //         summary:'eror',
+  //         detail:' fail to load'
+  //       })
+  //       }
+  //     });
 
 
 
-    }
+  //   }
   
-  }
+  // }
   
 
    // if used seperate component for edit then  used like this 
